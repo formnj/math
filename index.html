@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진단수학</title>
+
+<link rel="stylesheet" href="./css/main.css">
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+
+<link rel="stylesheet" href="./css/swiper.css">
+<script type="text/javascript" src="./js/swiper.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.module_left dt').each(function(){
+            if($(this).next().length > 0 && $(this).next()[0].tagName == 'DD'){
+                $(this).addClass('haschild');
+            }
+
+            $(this).children().click(function(){
+                toggle_slide(this);                
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <div class="content">
+                <!-- left -->
+                <div class="module_left">
+                    <h1><img src="../images/common/logo.png" alt="" /></h1>
+                    <dl class="single">
+                        <dt class="diagnosis"><a href="#none">진단하기</a></dt>
+                        <dt class="class"><a href="#none">클래스</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#none">클래스 전체보기</a></li>
+                                <li><a href="#none">클래스 신청하기</a></li>
+                                <li><a href="#none">진행중인 클래스</a></li>
+                                <li><a href="#none">종료된 클래스</a></li>
+                                <li><a href="#none">클래스 찾기</a></li>
+                            </ul>
+                        </dd>
+                        <dt class="studyroom"><a href="#none">스터디룸</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#none">스케줄</a></li>
+                                <li><a href="#none">캘린더</a></li>
+                            </ul>
+                        </dd>
+                        <dt class="wronganswer"><a href="#none">오답노트</a></dt>
+                    </dl>
+                    <dl class="single">
+                        <dt class="attendance"><a href="#none">출석체크</a></dt>
+                        <dt class="faq"><a href="#none">FAQ</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#none">서브메뉴01</a></li>
+                                <li><a href="#none">서브메뉴02</a></li>
+                            </ul>
+                        </dd>
+                        <dt class="qr"><a href="#none">My QR Code</a></dt>
+                    </dl>
+                    <div class="banner">
+                        <a href="#none">Banner</a>
+                    </div>
+                </div>
+                <!-- //left -->
+
+                <!-- center -->
+                <div class="module_main">
+                    <section class="schedule">
+                        <h2>이번주 스케줄
+                            <span>7월, 2023</span>
+                        </h2>
+                        <div class="inner">
+                            <ul class="week_wrap">
+                                <li class="current">
+                                    <p>
+                                        <em>+1</em>
+                                        <span>월</span>
+                                        <strong>03</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>화</span>
+                                        <strong>04</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>수</span>
+                                        <strong>05</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>목</span>
+                                        <strong>06</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>금</span>
+                                        <strong>07</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>토</span>
+                                        <strong>08</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>일</span>
+                                        <strong>09</strong>
+                                    </p>
+                                </li>
+                            </ul>
+                            <ul class="legend"><!-- type : 01=과제 / 02=학습 / 03=미제출 / 04=유사 -->
+                                <li>
+                                    <span class="type_01">과제</span>
+                                </li>
+                                <li>
+                                    <span class="type_02">학습</span>
+                                </li>
+                                <li>
+                                    <span class="type_03">미제출</span>
+                                </li>
+                                <li>
+                                    <span class="type_04">유사</span>
+                                </li>
+                            </ul>
+                            <ul class="schedule_detail">
+                                <li>
+                                    <p class="type_01" style="right:calc(85.71428571428571% + 4px); left:0;">[1학년 입문] 4-2. 정비례와 반비례</p>
+                                    <p class="type_04" style="right:0; left:calc(14.28571428571429% + 4px);">[1학년 입문] 4-2. 정비례와 반비례</p>
+                                </li>
+                                <li>
+                                    <p class="type_02" style="right:calc(28.57142857142857% + 4px); left:calc(14.28571428571429% + 4px);">[1학년 개념] 4-4. y=ax2+bx+c 그래프</p>
+                                </li>
+                                <li></li>
+                            </ul>
+                            <a href="#none" class="more">더보기</a>
+                        </div>
+                    </section>
+
+                    <!-- <section>
+                        <h2>진행 과제</h2>
+                        <dl>
+                            <dt></dt>
+                        </dl>
+                    </section> -->
+                </div>
+                <!-- //center -->
+
+                <!-- right -->
+                <div class="module_right">
+                    <div class="user_info">
+                        <span class="thumb">
+                            <em><img src="../images/common/img_user_default.png" alt="" /></em>
+                        </span>
+                        <p>
+                            <strong>진단고01</strong>
+                            <span>1010p</span>
+                        </p>
+                        <a href="#none">설정</a>
+                    </div>
+                    <section class="noti">
+                        <h2>알림<a href="#none" class="more">더보기</a></h2>
+                        <ul>
+                            <li>
+                                <a href="#none">
+                                    <span class="thumb">
+                                        <em><img src="../images/sample/sam_noti_01.png" alt="" /></em>
+                                    </span>
+                                    <p>
+                                        <strong>진단수학 고교</strong>
+                                        <span>현재 진행 중인 과제는 총 4건이고, 이 중 지연된 과제는 3건 입니다.</span>
+                                    </p>
+                                    <em>8시간 전</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="thumb">
+                                        <em><img src="../images/main/img_noti_default.png" alt="" /></em>
+                                    </span>
+                                    <p>
+                                        <strong>진단수학 고교</strong>
+                                        <span>현재 진행 중인 과제는 총 4건이고, 이 중 지연된 과제는 3건 입니다.</span>
+                                    </p>
+                                    <em>8시간 전</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="thumb">
+                                        <em><img src="../images/main/img_noti_default.png" alt="" /></em>
+                                    </span>
+                                    <p>
+                                        <strong>진단수학 고교</strong>
+                                        <span>현재 진행 중인 과제는 총 4건이고, 이 중 지연된 과제는 3건 입니다.</span>
+                                    </p>
+                                    <em>8시간 전</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="thumb">
+                                        <em><img src="../images/sample/sam_noti_01.png" alt="" /></em>
+                                    </span>
+                                    <p>
+                                        <strong>진단수학 고교</strong>
+                                        <span>현재 진행 중인 과제는 총 4건이고, 이 중 지연된 과제는 3건 입니다.</span>
+                                    </p>
+                                    <em>8시간 전</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="diagnosis">
+                        <h2>진단하기<a href="#none" class="more">더보기</a></h2>
+                        <ul>
+                            <li>단원명</li>
+                            <li>문제수</li>
+                            <li>정답률</li>
+                        </ul>
+                        <dl>
+                            <!-- loop -->
+                            <dt>
+                                <strong>1. 다항식</strong>
+                                <span>182</span>
+                                <span>91.2%</span>
+                            </dt>
+                            <dd>
+                                <strong>1-1. 다항식의 연산</strong>
+                                <span>81</span>
+                                <span>95.1%</span>
+                            </dd>
+                            <dd>
+                                <strong>1-2. 나머지정리와 인수분해</strong>
+                                <span>73</span>
+                                <span>89.0%</span>
+                            </dd>
+                            <!-- //loop -->
+
+                            <dt>
+                                <strong>2. 방정식과 부등식</strong>
+                                <span>-</span>
+                                <span>-%</span>
+                            </dt>
+                            <dd>
+                                <strong>2-1. 복소수와 이차방정식</strong>
+                                <span>196</span>
+                                <span>90.3%</span>
+                            </dd>
+                            <dd>
+                                <strong>2-2. 이차방정식과 이차함수</strong>
+                                <span>60</span>
+                                <span>93.3%</span>
+                            </dd>
+                        </dl>
+                    </section>
+                </div>
+                <!-- //right -->
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

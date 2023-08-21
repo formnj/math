@@ -1,32 +1,5 @@
 @import url('../css/common.css');
 .content {display:flex; flex-wrap:wrap;}
-.module_left {width:200px; padding:0 24px;}
-.module_left h1 {margin-top:8px; margin-bottom:16px;}
-.module_left dl + dl {margin-top:36px; padding-top:16px; border-top:1px solid #e5e5e5;}
-.module_left dt a {padding:8px 0; color:#222; font-size:13px; font-weight:700; position:relative; display:flex; align-items:center;}
-.module_left dt a:before {width:26px; height:26px; margin-right:8px; background-image:url('../images/common/icon_gnb.png'); background-repeat:no-repeat; background-size:60px auto; content:''; display:block;}
-.module_left dt.haschild a:after {width:13px; height:8px; margin-top:-3px; background:url('../images/common/icon_split.png') 0 -20px no-repeat; background-size:300px auto; content:''; position:absolute; top:50%; right:0; display:block; transform:rotate(180deg);}
-.module_left dt.haschild.active a:after {transform:rotate(0);}
-.module_left dd {margin-bottom:8px;}
-.module_left li + li {margin-top:4px;}
-.module_left li a {padding:4px 0 4px 15px; color:#6F6779; font-size:10px; font-weight:500; display:block;}
-
-/* gnb icon */
-.module_left dt.diagnosis a:before {background-position:0 0;}
-.module_left dt.class a:before {background-position:0 -30px;}
-.module_left dt.studyroom a:before {background-position:0 -60px;}
-.module_left dt.wronganswer a:before {background-position:0 -90px;}
-.module_left dt.attendance a:before {background-position:0 -120px;}
-.module_left dt.faq a:before {background-position:0 -150px;}
-.module_left dt.qr a:before {background-position:0 -180px;}
-
-.module_left dt.diagnosis.active a:before {background-position:-30px 0;}
-.module_left dt.class.active a:before {background-position:-30px -30px;}
-.module_left dt.studyroom.active a:before {background-position:-30px -60px;}
-.module_left dt.wronganswer.active a:before {background-position:-30px -90px;}
-.module_left dt.attendance.active a:before {background-position:-30px -120px;}
-.module_left dt.faq.active a:before {background-position:-30px -150px;}
-.module_left dt.qr.active a:before {background-position:-30px -180px;}
 
 .module_right {width:309px; margin-top:15px; padding:0 20px;}
 .module_right .user_info {padding:5px 0; display:flex; align-items:center;}
@@ -66,19 +39,21 @@
 .module_right .diagnosis dd + dd {padding-top:8px;}
 .module_right .diagnosis dd * {color:#a6a6a6; font-weight:400;}
 
-.module_main {padding:20px; background-color:#f5f5f5; flex:1;}
-.module_main h2 {font-size:16px;}
+.module_main {width:calc(100% - 509px); padding:20px; background-color:#f5f5f5;}
+.module_main h2 {font-size:16px; display:flex; align-items:center;}
 .module_main .schedule .inner {padding:8px; background-color:#fff; border-radius:12px; text-align:center;}
+
+.schedule h2 {justify-content:space-between;}
 .week_wrap {display:flex;}
 .week_wrap li {padding:4px; flex:1;}
 .week_wrap p {padding:10px; border:1px solid #D8D8D8; border-radius:6px; text-align:center; position:relative;}
 .week_wrap .current p {background-color:#A565E2;}
-.week_wrap p em {width:14px; height:14px; padding:2px; color:#fff; font-size:8px; font-style:normal; background-color:#3BCA9F; border-radius:50%; position:absolute; top:-3px; right:-3px; display:flex; align-items:center;}
-.week_wrap p * {font-size:14px; display:block;}
+.week_wrap p em {width:22px; height:22px; padding:2px; color:#fff; font-size:14px; font-style:normal; background-color:#3BCA9F; border-radius:50%; text-align:center; position:absolute; top:-5px; right:-5px; display:flex; align-items:center;}
+.week_wrap p * {font-size:16px; display:block;}
 .week_wrap p span {color:#D8D8D8;}
 .week_wrap p strong {color:#818181;}
 .week_wrap .current p span, .week_wrap .current p strong {color:#FDEFFF;}
-.legend {margin-right:8px; display:flex; justify-content:end; gap:8px;}
+.legend {padding:4px 8px; display:flex; justify-content:end; gap:8px;}
 .legend span {color:#949494; font-size:10px; display:flex; align-items:center;}
 .legend span:before {width:8px; height:8px; margin-right:2px; border-radius:50%; box-sizing:border-box; content:''; display:block;}
 .legend span.type_01:before, .schedule_detail .type_01 {background-color:#A565E2;}
@@ -86,8 +61,25 @@
 .legend span.type_03:before, .schedule_detail .type_03 {background-color:#A8A8A8;}
 .legend span.type_04:before, .schedule_detail .type_04 {background-color:#fff; border:1px solid #B37BE6;}
 
-.schedule_detail li {height:16px; background-color:#F1F1F1; border-radius:50px; position:relative;}
+.schedule_detail li {height:18px; margin:6px 4px; background-color:#F1F1F1; border-radius:50px; position:relative;}
 .schedule_detail li + li {margin-top:4px;}
-.schedule_detail p {padding:0 8px; color:#fff; font-size:10px; font-weight:500; white-space:nowrap; border-radius:50px; overflow:hidden; text-overflow:ellipsis; position:absolute; top:0; bottom:0;}
+.schedule_detail p {padding:0 8px; color:#fff; font-size:12px; font-weight:500; line-height:16px; white-space:nowrap; border:1px solid transparent; border-radius:50px; overflow:hidden; text-align:left; text-overflow:ellipsis; position:absolute; top:0; bottom:0;}
 .schedule_detail .type_04 {color:#B37BE6;}
 .schedule .more {color:#aeaeae; font-size:11px; text-decoration:underline;}
+
+.pronunciation h2 {margin-right:4px; margin-left:8px;}
+.pronunciation h2 strong {width:20px; height:20px; margin-right:10px; margin-left:6px; padding-right:2px; color:#fff; font-size:11px; font-weight:400; line-height:19px; background-color:#A565E2; border-radius:50%; text-align:center; display:block;}
+.pronunciation h2 ul, .pronunciation h2 span {display:flex; align-items:center;}
+.pronunciation h2 li {padding:8px 4px; color:#B1B1B1; font-size:14px; font-weight:500;}
+.pronunciation h2 span:before {width:7px; height:7px; margin-right:4px; border-radius:50%; content:''; display:block;}
+.pronunciation h2 span.type_01:before {background-color:#3BCA9F;}
+.pronunciation h2 span.type_02:before {background-color:#EDAFFF;}
+.pronunciation h2 em {margin-left:4px; font-style:normal;}
+.pronunciation h2 .more {padding:1px 3px 1px 8px; color:#B3B3B3; font-size:11px; font-weight:500; background-color:#fff; border:1px solid #B3B3B3; border-radius:50px; position:absolute; top:50%; right:0; display:flex; align-items:center; transform:translateY(-50%);}
+.pronunciation h2 .more:after {width:12px; height:12px; background:url('../images/common/icon_split.png') 0 -40px; background-size:300px auto; content:''; display:block;}
+
+.pronunciation dt p {padding:8px 20px; background-color:#fff; border-radius:12px; position:relative; display:flex; align-items:center;}
+.pronunciation dt p:before {width:32px; height:32px; margin-right:8px; background:url('../images/main/icon_pronunciation.png') 0 0 no-repeat; background-size:cover; content:''; display:block;}
+.pronunciation dt strong {font-size:15px; font-weight:600;}
+.pronunciation [class*='dday_'] {padding:6px 11px; font-size:12px; font-weight:500; border:1px solid transparent; border-radius:2px; text-align:center;}
+.pronunciation dd {padding-right:48px; padding-left:72px; background-color:#fff; border-radius:0 0 12px 12px; display:none; transform:translateY(-12px);}

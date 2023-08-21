@@ -40,4 +40,32 @@ img {max-width:100%;}
 ::-webkit-scrollbar-thumb {background-color:#bdbdbd; border-radius:4px;}
 ::-webkit-scrollbar-track {background-color:rgba(155,155,155,0.2); border-radius:4px;}
 
-.module_left dd {padding-left:20px; overflow:hidden; display:none;}
+h2 {position:relative;}
+
+.module_left {width:200px; padding:0 24px;}
+.module_left h1 {margin-top:8px; margin-bottom:16px;}
+.module_left dl + dl {margin-top:36px; padding-top:16px; border-top:1px solid #e5e5e5;}
+.module_left dt a {padding:8px 0; color:#222; font-size:13px; font-weight:700; position:relative; display:flex; align-items:center;}
+.module_left dt a:before {width:26px; height:26px; margin-right:8px; background-image:url('../images/common/icon_gnb.png'); background-repeat:no-repeat; background-size:60px auto; content:''; display:block;}
+.module_left dt.haschild a:after {width:13px; height:8px; margin-top:-3px; background:url('../images/common/icon_split.png') 0 -20px no-repeat; background-size:300px auto; content:''; position:absolute; top:50%; right:0; display:block; transform:rotate(180deg);}
+.module_left dt.haschild.active a:after {transform:rotate(0);}
+.module_left dd {margin-bottom:8px; padding-left:20px; overflow:hidden; display:none;}
+.module_left li + li {margin-top:4px;}
+.module_left li a {padding:4px 0 4px 15px; color:#6F6779; font-size:10px; font-weight:500; display:block;}
+
+/* gnb icon */
+.module_left dt.diagnosis a:before {background-position:0 0;}
+.module_left dt.class a:before {background-position:0 -30px;}
+.module_left dt.studyroom a:before {background-position:0 -60px;}
+.module_left dt.wronganswer a:before {background-position:0 -90px;}
+.module_left dt.attendance a:before {background-position:0 -120px;}
+.module_left dt.faq a:before {background-position:0 -150px;}
+.module_left dt.qr a:before {background-position:0 -180px;}
+
+.module_left dt.diagnosis.active a:before {background-position:-30px 0;}
+.module_left dt.class.active a:before {background-position:-30px -30px;}
+.module_left dt.studyroom.active a:before {background-position:-30px -60px;}
+.module_left dt.wronganswer.active a:before {background-position:-30px -90px;}
+.module_left dt.attendance.active a:before {background-position:-30px -120px;}
+.module_left dt.faq.active a:before {background-position:-30px -150px;}
+.module_left dt.qr.active a:before {background-position:-30px -180px;}

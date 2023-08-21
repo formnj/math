@@ -20,8 +20,12 @@
             }
 
             $(this).children().click(function(){
-                toggle_slide(this);                
+                toggle_slide(this);
             });
+        });
+
+        $('.pronunciation dt p').click(function(){
+            toggle_slide(this);
         });
     });
 </script>
@@ -157,12 +161,36 @@
                         </div>
                     </section>
 
-                    <!-- <section>
-                        <h2>진행 과제</h2>
+                    <section class="pronunciation">
+                        <h2>진행 과제
+                            <strong>10</strong>
+                            <ul>
+                                <li>
+                                    <span class="type_01">학습<em>3</em></span>
+                                </li>
+                                <li>
+                                    <span class="type_02">유사<em>3</em></span>
+                                </li>
+                            </ul>
+                            <a href="#none" class="more">더보기</a>
+                        </h2>
                         <dl>
-                            <dt></dt>
+                            <dt>
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <p>
+                                    <strong>1학년 10반·진단01</strong>
+                                    <em>입문</em>
+                                    <em>학습 5</em>
+                                </p>
+                                <span class="status type_01">진행</span><!-- 상태값 : type_01 = 진행 / type_02 = 미제출 -->
+                            </dd>
                         </dl>
-                    </section> -->
+                    </section>
                 </div>
                 <!-- //center -->
 

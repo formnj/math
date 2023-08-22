@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진단수학</title>
+
+<link rel="stylesheet" href="./css/student_main.css">
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+
+<link rel="stylesheet" href="./css/swiper.css">
+<script type="text/javascript" src="./js/swiper.js"></script>
+<script type="text/javascript">
+    $(function(){
+        /* load more sample */
+        $('.pronunciation > .more').click(function(){
+            $('.pronunciation dl').append(`<dt class="study">
+                <p>
+                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                </p>
+            </dt>
+            <dd>
+                <div>
+                    <p>
+                        <strong>1학년 10반·진단01</strong>
+                        <em>입문</em><em>학습 5</em>
+                    </p>
+                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                </div>
+            </dd>
+
+            <dt class="similar">
+                <p>
+                    <strong>2-2. 이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고</strong>
+                    <span class="dday_after day">D+10</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                </p>
+            </dt>
+            <dd>
+                <div>
+                    <p>
+                        <strong>1학년 10반·진단01</strong>
+                        <em>입문</em><em>학습 5</em>
+                    </p>
+                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                </div>
+            </dd>
+
+            <dt>
+                <p>
+                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                </p>
+            </dt>
+            <dd>
+                <div>
+                    <p>
+                        <strong>1학년 10반·진단01</strong>
+                        <em>입문</em><em>학습 5</em>
+                    </p>
+                    <span class="status type_01">진행</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                </div>
+            </dd>`);
+        });
+        /* //load more sample */
+
+
+        $('.module_left dt').each(function(){
+            if($(this).next().length > 0 && $(this).next()[0].tagName == 'DD'){
+                $(this).addClass('haschild');
+            }
+
+            $(this).children().click(function(){
+                toggle_slide(this);
+            });
+        });
+
+        $('.pronunciation').delegate('dt p', 'click', function(){
+            toggle_slide(this);
+        });
+
+        /* visual */
+        var delay = 3000;
+
+        var option_visual = {
+            grabCursor: true,
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                shadow: true,
+                translate: ["-20%", 0, -1],
+                },
+                next: {
+                translate: ["100%", 0, 0],
+                },
+            },
+            autoplay: {
+                delay: delay,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"><em></em></span>';
+                },
+            },
+            // on: {
+            //     init: function(){},
+            //     slideChange: function(swiper){},
+            //     slideChangeTransitionEnd: function(swiper) {},
+            // },
+            // navigation: {
+            //     nextEl: '.visual .swiper-button-next',
+            //     prevEl: '.visual .swiper-button-prev',
+            // },
+        };
+
+        var swiper = new Swiper('.visual.swiper-container', option_visual);
+    });
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <h1>진단수학 고교</h1>
+            <button>전체메뉴</button>
+
+            <ul class="quick">
+                <li><a href="#none">검색</a></li>
+                <li><a href="#none">알림</a></li>
+            </ul>
+        </header>
+        <!-- //header -->
+
+        <div id="container">
+            <div class="content">
+                <!-- viusual -->
+                <div class="visual swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <div class="item">
+                                <span class="thumb"><img src="./images/sample/mobile_visual_01.jpg" alt="" /></span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="item">
+                                <span class="thumb"><img src="./images/sample/mobile_visual_02.jpg" alt="" /></span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="item">
+                                <span class="thumb"><img src="./images/sample/mobile_visual_03.jpg" alt="" /></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //viusual -->
+
+                <!-- center -->
+                <div class="module_main">
+                    <section class="schedule">
+                        <h2>이번주 스케줄
+                            <span>7월, 2023</span>
+                        </h2>
+                        <div class="inner">
+                            <ul class="week_wrap">
+                                <li class="current">
+                                    <p>
+                                        <em>+1</em>
+                                        <span>월</span>
+                                        <strong>03</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>화</span>
+                                        <strong>04</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>수</span>
+                                        <strong>05</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>목</span>
+                                        <strong>06</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>금</span>
+                                        <strong>07</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>토</span>
+                                        <strong>08</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>일</span>
+                                        <strong>09</strong>
+                                    </p>
+                                </li>
+                            </ul>
+                            <ul class="legend"><!-- type : 01=과제 / 02=학습 / 03=미제출 / 04=유사 -->
+                                <li>
+                                    <span class="type_01">과제</span>
+                                </li>
+                                <li>
+                                    <span class="type_02">학습</span>
+                                </li>
+                                <li>
+                                    <span class="type_03">미제출</span>
+                                </li>
+                                <li>
+                                    <span class="type_04">유사</span>
+                                </li>
+                            </ul>
+                            <ul class="schedule_detail">
+                                <li>
+                                    <!-- left : (100/7) * 시작할 위치 순번 + 4 / right : (100/7) * (7 - 끝날 위치 순번) + 4 -->
+                                    <p class="type_01" style="right:calc(85.71428571428571% + 4px); left:0;">[1학년 입문] 4-2. 정비례와 반비례</p>
+                                    <p class="type_04" style="right:0; left:calc(14.28571428571429% + 4px);">[1학년 입문] 4-2. 정비례와 반비례</p>
+                                </li>
+                                <li>
+                                    <p class="type_02" style="right:calc(28.57142857142857% + 4px); left:calc(14.28571428571429% + 4px);">[1학년 개념] 4-4. y=ax2+bx+c 그래프</p>
+                                </li>
+                                <li></li>
+                            </ul>
+                            <a href="#none" class="more">더보기</a>
+                        </div>
+                    </section>
+
+                    <section class="pronunciation">
+                        <h2>진행 과제
+                            <strong>10</strong>
+                            <ul>
+                                <li>
+                                    <span class="type_01">학습<em>3</em></span>
+                                </li>
+                                <li>
+                                    <span class="type_02">유사<em>3</em></span>
+                                </li>
+                            </ul>
+                            <a href="#none" class="more">더보기</a>
+                        </h2>
+                        <dl>
+                            <dt class="study"><!-- 학습상태 = study / 유사 = similar -->
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+
+                            <dt class="similar">
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_after day">D+10</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+
+                            <dt>
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_before hour">23시간 전</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status type_01">진행</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <a href="#none" class="more">LOAD MORE</a>
+                    </section>
+                </div>
+                <!-- //center -->
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

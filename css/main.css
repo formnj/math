@@ -31,18 +31,22 @@
 
 .module_right .diagnosis li {padding:10px 0 9px; color:#c8c8c8; font-size:12px; font-weight:500;}
 .module_right .diagnosis li:not(:first-child) {width:58px; text-align:right;}
+.module_right .diagnosis li:nth-child(1) {flex:1;}
 .module_right .diagnosis ul, .module_right .diagnosis dl {margin-left:3px;}
-.module_right .diagnosis ul, .module_right .diagnosis dl > * {width:100%; display:table;}
-.module_right .diagnosis li, .module_right .diagnosis dl > * > * {display:table-cell;}
+.module_right .diagnosis ul, .module_right .diagnosis dl > * {width:100%; display:flex;}
+/* .module_right .diagnosis li, .module_right .diagnosis dl > * > * {display:table-cell;} */
+
 .module_right .diagnosis dl {margin-right:-10px; padding-right:10px;}
 .module_right .diagnosis dl span {text-align:right;}
-.module_right .diagnosis dl span + span {width:66px;}
 .module_right .diagnosis dt, .module_right .diagnosis dd {font-size:12px;}
 .module_right .diagnosis dt {padding-bottom:3px;}
 .module_right .diagnosis dd + dt {padding-top:17px;}
 .module_right .diagnosis dt strong {font-size:14px;}
 .module_right .diagnosis dd {padding:4px 0 0 7px;}
 .module_right .diagnosis dd * {color:#a6a6a6; font-weight:400;}
+.module_right .diagnosis dt strong, .module_right .diagnosis dd strong {white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;}
+.module_right .diagnosis dt span, .module_right .diagnosis dd span {width:30px;}
+.module_right .diagnosis dl span + span {width:63px;}
 
 .module_main {width:calc(100% - 509px); height:100%; padding:20px; background-color:#f5f5f5; overflow:auto;}
 .module_main h2 {margin-bottom:8px; margin-left:4px; font-size:16px; display:flex; align-items:center;}

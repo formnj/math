@@ -14,6 +14,59 @@
 <script type="text/javascript" src="./js/swiper.js"></script>
 <script type="text/javascript">
     $(function(){
+        /* load more sample */
+        $('.pronunciation > .more').click(function(){
+            $('.pronunciation dl').append(`<dt class="study">
+                <p>
+                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                </p>
+            </dt>
+            <dd>
+                <div>
+                    <p>
+                        <strong>1학년 10반·진단01</strong>
+                        <em>입문</em><em>학습 5</em>
+                    </p>
+                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                </div>
+            </dd>
+
+            <dt class="similar">
+                <p>
+                    <strong>2-2. 이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고</strong>
+                    <span class="dday_after day">D+10</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                </p>
+            </dt>
+            <dd>
+                <div>
+                    <p>
+                        <strong>1학년 10반·진단01</strong>
+                        <em>입문</em><em>학습 5</em>
+                    </p>
+                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                </div>
+            </dd>
+
+            <dt>
+                <p>
+                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                </p>
+            </dt>
+            <dd>
+                <div>
+                    <p>
+                        <strong>1학년 10반·진단01</strong>
+                        <em>입문</em><em>학습 5</em>
+                    </p>
+                    <span class="status type_01">진행</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                </div>
+            </dd>`);
+        });
+        /* //load more sample */
+
+
         $('.module_left dt').each(function(){
             if($(this).next().length > 0 && $(this).next()[0].tagName == 'DD'){
                 $(this).addClass('haschild');
@@ -77,6 +130,10 @@
 
                 <!-- center -->
                 <div class="module_main">
+                    <section class="alert_ment">
+                        <span>반가워요, 진단고01님! 👋</span>
+                        <p>현재 진행 중인 과제는 총 1건이에요</p>
+                    </section>
                     <section class="schedule">
                         <h2>이번주 스케줄
                             <span>7월, 2023</span>
@@ -175,6 +232,38 @@
                             <a href="#none" class="more">더보기</a>
                         </h2>
                         <dl>
+                            <dt class="study"><!-- 학습상태 = study / 유사 = similar -->
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+
+                            <dt class="similar">
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_after day">D+10</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+
                             <dt>
                                 <p>
                                     <strong>2-2. 이차방정식과 이차함수 그리고</strong>
@@ -182,14 +271,17 @@
                                 </p>
                             </dt>
                             <dd>
-                                <p>
-                                    <strong>1학년 10반·진단01</strong>
-                                    <em>입문</em>
-                                    <em>학습 5</em>
-                                </p>
-                                <span class="status type_01">진행</span><!-- 상태값 : type_01 = 진행 / type_02 = 미제출 -->
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status type_01">진행</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
                             </dd>
                         </dl>
+
+                        <a href="#none" class="more">LOAD MORE</a>
                     </section>
                 </div>
                 <!-- //center -->

@@ -66,17 +66,6 @@
         });
         /* //load more sample */
 
-
-        $('.module_left dt').each(function(){
-            if($(this).next().length > 0 && $(this).next()[0].tagName == 'DD'){
-                $(this).addClass('haschild');
-            }
-
-            $(this).children().click(function(){
-                toggle_slide(this);
-            });
-        });
-
         $('.pronunciation').delegate('dt p', 'click', function(){
             toggle_slide(this);
         });
@@ -107,15 +96,6 @@
                     return '<span class="' + className + '"><em></em></span>';
                 },
             },
-            // on: {
-            //     init: function(){},
-            //     slideChange: function(swiper){},
-            //     slideChangeTransitionEnd: function(swiper) {},
-            // },
-            // navigation: {
-            //     nextEl: '.visual .swiper-button-next',
-            //     prevEl: '.visual .swiper-button-prev',
-            // },
         };
 
         var swiper = new Swiper('.visual.swiper-container', option_visual);
@@ -127,11 +107,13 @@
         <!-- header -->
         <header>
             <h1>진단수학 고교</h1>
-            <button>전체메뉴</button>
+            <button class="all_menu">
+                <em>전체메뉴</em>
+            </button>
 
             <ul class="quick">
-                <li><a href="#none">검색</a></li>
-                <li><a href="#none">알림</a></li>
+                <li><a href="#none" class="search">검색</a></li>
+                <li><a href="#none" class="alarm">알림</a></li>
             </ul>
         </header>
         <!-- //header -->
@@ -309,6 +291,100 @@
                                     <span class="status type_01">진행</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
                                 </div>
                             </dd>
+                            <dt class="study"><!-- 학습상태 = study / 유사 = similar -->
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+
+                            <dt class="similar">
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_after day">D+10</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+
+                            <dt>
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_before hour">23시간 전</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status type_01">진행</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+                            <dt class="study"><!-- 학습상태 = study / 유사 = similar -->
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+
+                            <dt class="similar">
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_after day">D+10</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status">미제출</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
+
+                            <dt>
+                                <p>
+                                    <strong>2-2. 이차방정식과 이차함수 그리고</strong>
+                                    <span class="dday_before hour">23시간 전</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
+                                </p>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <p>
+                                        <strong>1학년 10반·진단01</strong>
+                                        <em>입문</em><em>학습 5</em>
+                                    </p>
+                                    <span class="status type_01">진행</span><!-- 상태값 : default 미제출 / type_01 = 진행  -->
+                                </div>
+                            </dd>
                         </dl>
 
                         <a href="#none" class="more">LOAD MORE</a>
@@ -317,6 +393,18 @@
                 <!-- //center -->
             </div>
         </div>
+
+        <!-- action bar -->
+        <div class="action_bar">
+            <ul>
+                <li><a href="#none" class="home active">홈</a></li><!-- 활성화 a에 active 클래스 추가 -->
+                <li><a href="#none" class="diagnosis">진단하기</a></li>
+                <li><a href="#none" class="class">클래스</a></li>
+                <li><a href="#none" class="study">스터디룸</a></li>
+                <li><a href="./wrong_note_student.html" class="wrong_note">오답노트</a></li>
+            </ul>
+        </div>
+        <!-- //action bar -->
     </div>    
 </body>
 </html>

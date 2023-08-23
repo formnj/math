@@ -1,3 +1,30 @@
+/* actionbar 노출관련 */
+var lastScroll = 0;
+var innerHeight = $(window).height();
+
+$(window).on('scroll', function(){
+    var scrollTop = $(this).scrollTop();
+
+    var scrollHeight = $('body').height();
+
+    console.log(scrollHeight);
+
+    if(scrollTop > lastScroll) {
+        //down
+        if (scrollTop + innerHeight >= (scrollHeight-1)) {
+            $('.action_bar').stop().removeAttr('style');
+        } else {
+            $('.action_bar').stop().css('bottom', -($('.action_bar').outerHeight()));
+        }
+    } else {
+        // up
+        $('.action_bar').stop().removeAttr('style');
+    }
+
+    lastScroll = scrollTop;
+});
+/* //actionbar 노출관련 */
+
 function toggle_slide(_target) {
     var _target = $(_target);
     _target.closest('dl').hasClass('single') ? // 하나만 오픈

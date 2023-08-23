@@ -7,8 +7,6 @@ $(window).on('scroll', function(){
 
     var scrollHeight = $('body').height();
 
-    console.log(scrollHeight);
-
     if(scrollTop > lastScroll) {
         //down
         if (scrollTop + innerHeight >= (scrollHeight-1)) {

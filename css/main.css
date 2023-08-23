@@ -1,4 +1,6 @@
 @import url('../css/common.css');
+html, body, #wrap, #container, .content {height:100%;}
+
 .content {display:flex; flex-wrap:wrap;}
 
 .module_right {width:309px; margin-top:15px; padding:0 20px;}

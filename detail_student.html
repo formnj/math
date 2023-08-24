@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진단수학</title>
+
+<link rel="stylesheet" href="./css/student_sub.css">
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+
+<link rel="stylesheet" href="./css/swiper.css">
+<script type="text/javascript" src="./js/swiper.js"></script>
+<script type="text/javascript">
+    $(function(){
+        /* 정답풀이 노출 */
+        $('.check_ani em').click(function(){
+            if($(this).parent().find('input').is(':checked')){
+                $(this).text('OFF');
+                $('.answer').stop().slideUp();
+            } else {
+                $(this).text('ON');
+                $('.answer').stop().slideDown();
+            }
+        });
+
+        /* 편집기능 */
+        $('header .quick .note, header .quick .draw').click(function(){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+            } else {
+                $(this).parent().siblings().children().removeClass('active');
+                $(this).addClass('active');
+            }
+
+            if($('header .quick .draw').hasClass('active')){
+                $('.sticky_wrap.tools').stop().slideDown();
+            } else {
+                $('.sticky_wrap.tools').stop().slideUp();
+            }
+        });
+        
+        /* 툴 활성화 및 레이어 노출 */
+        $('.tool_list a').click(function(){
+            $('.tool_list > li').removeClass('active');
+            $(this).parent().addClass('active');
+            if($('[class*="option_"]').length > 0){
+                $('[class*="option_"]').remove();
+            }
+
+            console.log($(this).parent().offset().left);
+
+            var _class = $(this).parent().attr('class');
+            var _key = _class.replace(' active','');
+
+            switch (_key) {
+                case "color":
+                $('.sticky_wrap.tools').append(`
+                        <ul class="option_color" style="left:${$(this).parent().offset().left}px">
+                            <li class="yellow"><button>노랑</button></li>
+                            <li class="blue"><button>파랑</button></li>
+                            <li class="red"><button>빨강</button></li>
+                            <li class="black"><button>검정</button></li>
+                        </ul>
+                    `);
+                    break;
+                case "stroke":
+                $('.sticky_wrap.tools').append(`
+                        <ul class="option_stroke" style="left:${$(this).parent().offset().left}px">
+                            <li class="type_01"><button>얇음</button></li>
+                            <li class="type_02"><button>약간얇음</button></li>
+                            <li class="type_03"><button>약간두꺼움</button></li>
+                            <li class="type_04"><button>두꺼움</button></li>
+                        </ul>
+                    `);
+                    break;            
+                default:
+                    break;
+            }
+
+            $('[class*="option_"] li').delegate('button', 'click', function(){
+                $('.tool_list .active a').attr('class',$(this).parent().attr('class'));
+
+                $('[class*="option_"]').remove();
+            });
+        });
+    });
+</script>
+</head>
+<body style="background-color:#fff;">
+    <div id="wrap">
+        <!-- header -->
+        <header class="sub">
+            <button class="history_back">뒤로</button>
+            <strong>
+                <!-- 상세에서만 노출 : 해당 타입 클래스 적용 -->
+                <em class="type_01">틀린</em>
+                <!-- //상세에서만 노출 : 해당 타입 클래스 적용 -->
+            1. 방정식과 부등식</strong>
+            <ul class="quick">
+                <li><a href="#none" class="note">노트</a></li>
+                <li><a href="#none" class="draw">그리기</a></li>
+                <li>
+                    <button class="all_menu">
+                        <em>전체메뉴</em>
+                    </button>
+                </li>
+            </ul>
+        </header>
+        <!-- //header -->
+
+        <div id="container">
+
+            <div class="sticky_wrap tools">
+                <div>
+                    <p>
+                        <a href="#none" class="prev">이전</a>
+                        <span><em>1</em><em>3</em></span>
+                        <a href="#none" class="next">다음</a>
+                    </p>
+                    <ul class="tool_list">
+                        <li class="color"><a href="#none">색상</a></li>
+                        <li class="stroke"><a href="#none">선</a></li>
+                        <li class="eraser"><a href="#none">지우개</a></li>
+                        <li class="add"><a href="#none">추가</a></li>
+                        <li class="delete"><a href="#none">제거</a></li>
+                        <li class="rotate"><a href="#none">회전</a></li>
+                        <li class="camera"><a href="#none">카메라</a></li>
+                        <li class="remove"><a href="#none">사진제거</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content detail">
+                <div class="question">
+                    <dl>
+                        <dt>다음 중 다항식 5xy - y2 + 2x2 + 3y + 1를 x에 대한 내림차순으로 정리한 것을 골라라.</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <em>1</em>
+                                    <p>1 + 5yx + 2x<sup>2</sup> - y<sup>2</sup> + 3y</p>
+                                </li>
+                                <li>
+                                    <em>2</em>
+                                    <p>1 + 5yx + 2x<sup>2</sup> - y<sup>2</sup> + 3y</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <p class="explain_check">
+                        <strong>정답풀이
+                            <label class="check_ani">
+                                <input type="checkbox">
+                                <em>OFF</em>
+                            </label>
+                        </strong>
+                        <span>입문</span>
+                    </p>
+                </div>
+                <div class="answer">
+                    x에 대한 내림차순으로 정리하려면 x의 차수가 높은 항이 앞에 위치하도록 정리해야 한다.
+                    ( i ) x2 이 포함된 항은 2x2 이다.
+                    ( ii ) x가 포함된 항은 5xy = 5yx 이다.
+                    ( iii ) 상수항은 -y2 + 3y + 1 이다.
+                    따라서 주어진 식을 x에 대한 내림차순으로 정리하면
+                    2x2 + 5yx - y2 + 3y + 1 
+                    이다.
+                </div>
+            </div>
+        </div>
+
+        <!-- action bar -->
+        <div class="detail_bottom">
+            <ul>
+                <li class="similar"><a href="#none">유사문제</a></li>
+                <li class="delete"><a href="#none">삭제</a></li>
+                <li class="report"><a href="#none">신고</a></li>
+            </ul>
+            <p>
+                <a href="#none" class="prev">이전</a>
+                <span><em>1</em><em>3</em></span>
+                <a href="#none" class="next">다음</a>
+            </p>
+        </div>
+        <!-- //action bar -->
+    </div>    
+</body>
+</html>

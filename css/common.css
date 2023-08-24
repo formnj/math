@@ -26,7 +26,7 @@
 }
 
 html {font-size:1em; letter-spacing:-0.025em;}
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button {-webkit-box-sizing:border-box;box-sizing:border-box; margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button {-webkit-box-sizing:border-box;box-sizing:border-box; margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline;}
 
 ul, ol {list-style:none;}
 a {text-decoration:none;}
@@ -41,18 +41,24 @@ img {max-width:100%;}
 ::-webkit-scrollbar-track {background-color:rgba(155,155,155,0.2); border-radius:4px;}
 
 /* input */
-.check {padding-left:20px; line-height:1; position:relative; display:inline-block;}
+.check {padding-left:30px; line-height:1; position:relative; display:inline-block;}
 .check > * {line-height:1.4; vertical-align:middle; display:inline-block;}
 .check input {margin:0 0 0 1px; position:absolute;}
-.check .label:before, .check .label:after {content:''; position:absolute; display:inline-block;}
-
-/* radio */
-.check input[type='radio'], .check input[type='radio'] + .label:before {width:12px; height:12px; background-color:#fff; border:1px solid #ccc; border-radius:50%; top:3px; left:0;}
-.check input[type='radio']:checked + .label:after {width:8px; height:8px; background-color:#333; border-radius:50%; top:6px; left:3px;}
+.check .label:before {content:''; position:absolute; display:inline-block;}
 
 /* checkbox */
-.check input[type='checkbox'], .check input[type='checkbox'] + .label:before {width:12px; height:12px; background-color:#fff; border:1px solid #ccc; top:3px; left:0;}
-.check input[type='checkbox']:checked + .label:after {width:5px; height:9px; border:2px solid #333; border-top:0; border-left:0; top:2px; left:4px; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
+.check input[type='checkbox'] {opacity:0;}
+.check input[type='checkbox'], .check input[type='checkbox'] + .label:before {width:24px; height:24px; background-image:url('../images/common/icon_m_split.png'); background-position:-40px -40px; background-repeat:no-repeat; background-size:100px auto; border-radius:50%; top:3px; left:0px;}
+.check input[type='checkbox']:checked + .label:before {background-position:-70px -40px;}
+
+.check_ani {position:relative; display:inline-block;}
+.check_ani input {margin:0 0 0 1px; position:absolute; opacity:0;}
+.check_ani em {min-height:20px; padding-left:48px; position:relative; display:block;}
+.check_ani input[type='checkbox'] {opacity:0;}
+.check_ani input[type='checkbox'] + em:after {width:16px; height:16px; background-color:#fff; border-radius:50%; content:''; position:absolute; top:50%; left:2px; z-index:1; display:block; transform:translateY(-50%); transition:all 0.2s;}
+.check_ani input[type='checkbox']:checked + em:before {background-color:#ff7200;}
+.check_ani em:before {width:42px; height:22px; background-color:#ccc; border:0; border-radius:60px; content:''; position:absolute; top:0; left:0; display:inline-block;}
+.check_ani input[type='checkbox']:checked + em:after {left:25px;}
 
 h2 {position:relative;}
 /* mobile */
@@ -64,17 +70,28 @@ header h1 {font-size:18px; font-weight:500;}
 .all_menu em:before {top:6px;}
 .all_menu em:after {bottom:6px;}
 
-header.sub {padding:7px 20px 7px 50px; background-color:#fff;}
-header.sub strong {color:#222; font-size:16px; font-weight:500;}
-header.sub .all_menu {right:20px; left:auto;}
-header.sub .all_menu:before, header.sub .all_menu em:before, header.sub .all_menu em:after {background-color:#aeaeae;}
-header.sub .history_back {width:32px; height:32px; font-size:0; background:url('../images/common/icon_m_split.png') 0 -40px no-repeat; background-size:100px auto; position:absolute; top:50%; left:12px; transform:translateY(-50%); display:block;}
-
 header .quick {font-size:0; display:flex;}
 header .quick a {width:26px; height:26px; background-image:url('../images/common/icon_m_split.png'); background-repeat:no-repeat; background-size:100px auto; display:block;}
 header .quick * + * {margin-left:4px;}
 header .quick .search {background-position:0 0;}
 header .quick .alarm {background-position:-40px 0;}
+header .quick .note {background-position:0 -70px;}
+header .quick .draw {background-position:0 -100px;}
+
+header .quick .note.active {background-position:-40px -70px;}
+header .quick .draw.active {background-position:-40px -100px;}
+
+header.sub {padding:7px 20px 7px 50px; background-color:#fff;}
+header.sub .quick * + * {margin-left:10px;}
+header.sub strong {color:#222; font-size:16px; font-weight:500; display:flex; align-items:center;}
+header.sub strong em {width:16px; height:16px; margin-right:12px; margin-left:3px; font-size:0; border-radius:50%; display:block;}
+header.sub strong em.type_01 {background-color:#3BCA9F;}
+header.sub strong em.type_02 {background-color:#A565E2;}
+header.sub strong em.type_03 {background-color:#FFBC00;}
+header.sub strong em.type_04 {background-color:#E13B56;}
+header.sub .all_menu {position:static; transform:translateY(0);}
+header.sub .all_menu:before, header.sub .all_menu em:before, header.sub .all_menu em:after {background-color:#aeaeae;}
+header.sub .history_back {width:32px; height:32px; font-size:0; background:url('../images/common/icon_m_split.png') 0 -40px no-repeat; background-size:100px auto; position:absolute; top:50%; left:12px; transform:translateY(-50%); display:block;}
 
 .action_bar {position:fixed; right:0; bottom:0; left:0; z-index:1; transition:bottom 0.25s;}
 .action_bar ul {padding:8px 24px; background-color:#fff; border-radius:24px 24px 0 0; box-shadow:0 -4px 8px rgba(201, 201, 201, 0.25); display:flex;}

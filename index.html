@@ -22,6 +22,25 @@
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script type="text/javascript">
     $(function(){
+        var list = [
+            {title : '테블릿 (학생용)', url : 'tablet.html', etc : ''},
+            {title : '모바일 (학생용)', url: 'mobile_student.html', etc : ''},
+            {title: '모바일 (학생용) - 오답노트', url: 'wrongnote_student.html', etc : ''},
+            {title: '모바일 (학생용) - Fast View', url: 'fastview_student.html', etc: ''},
+            {title: '모바일 (학생용) - 오답노트 상세', url: 'detail_student.html', etc: ''}
+        ];
+
+        for(i = 0; i<list.length; i++){
+            console.log(list[i].title);
+            $('.content.guide ul').not('.guide_header').append(`
+            <li>
+                <dl>
+                    <dt>${list[i].title}</dt>
+                    <dd><a href="./${list[i].url}" target="_blank">바로가기</a></dd>
+                    <dd>${list[i].etc}</dd>
+                </dl>
+            </li>`);
+        }
     });
 </script>
 </head>
@@ -32,38 +51,10 @@
                 <ul class="guide_header">
                     <li>페이지명</li>
                     <li>바로가기</li>
+                    <li>비고</li>
                 </ul>
                 <ul>
-                    <li>
-                        <dl>
-                            <dt>테블릿 (학생용)</dt>
-                            <dd><a href="./tablet.html" target="_blank">바로가기</a></dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>모바일 (학생용)</dt>
-                            <dd><a href="./mobile_student.html" target="_blank">바로가기</a></dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>모바일 (학생용) - 오답노트</dt>
-                            <dd><a href="./wrongnote_student.html" target="_blank">바로가기</a></dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>모바일 (학생용) - Fast View</dt>
-                            <dd><a href="./fastview_student.html" target="_blank">바로가기</a></dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>모바일 (학생용) - 오답노트 상세</dt>
-                            <dd><a href="./detail_student.html" target="_blank">바로가기</a></dd>
-                        </dl>
-                    </li>
+                    <li></li>
                 </ul>
             </div>
         </div>

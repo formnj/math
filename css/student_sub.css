@@ -1,4 +1,4 @@
-@import url('../css/common.css');
+@import url('../css/mobile_common.css');
 
 body {background-color:#f5f5f5;}
 
@@ -21,9 +21,11 @@ h2 .sum {color:#616161; font-size:12px; font-weight:500; position:absolute; top:
 .sticky_wrap .detail_top strong {color:#999; font-size:12px; font-weight:700;}
 .sticky_wrap .detail_top ul {display:flex;}
 .sticky_wrap .detail_top ul a {padding:0 5px; color:#999; font-size:12px; line-height:24px; position:relative; display:block;}
-.sticky_wrap .detail_top .add a {width:24px; height:24px; margin-left:5px; padding:0; font-size:0;}
-.sticky_wrap .detail_top .add a:before, .sticky_wrap .detail_top .add a:after {width:14px; border-top:1px solid #A565E2; content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
-.sticky_wrap .detail_top .add a:after {transform:translate(-50%, -50%) rotate(90deg);}
+.sticky_wrap .detail_top .add a, .sticky_wrap .detail_top .close a {width:24px; height:24px; margin-left:5px; padding:0; font-size:0;}
+.sticky_wrap .detail_top .close {transform:rotate(45deg);}
+.sticky_wrap .detail_top .close a {margin-left:1px;}
+.sticky_wrap .detail_top .add a:before, .sticky_wrap .detail_top .add a:after, .sticky_wrap .detail_top .close a:before, .sticky_wrap .detail_top .close a:after {width:14px; border-top:1px solid #A565E2; content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+.sticky_wrap .detail_top .add a:after, .sticky_wrap .detail_top .close a:after {transform:translate(-50%, -50%) rotate(90deg);}
 
 .sticky_wrap.tools {padding:12px 0; border-radius:0; box-shadow:none; display:none;}
 .sticky_wrap.tools > div {display:flex;}
@@ -33,7 +35,7 @@ h2 .sum {color:#616161; font-size:12px; font-weight:500; position:absolute; top:
 .sticky_wrap.tools p span {height:22px; padding:0 8px; margin:0 4px; border:1px solid #b3b3b3; border-radius:4px; display:flex; align-items:center;}
 .sticky_wrap.tools p em {font-style:normal;}
 .sticky_wrap.tools p em + em:before {margin:0 5px; content:'/'; display:inline-block;}
-.sticky_wrap.tools ul.tool_list {margin-left:8px; font-size:0; overflow:auto; display:flex; flex:1; flex-wrap:nowrap; gap:12px;}
+.sticky_wrap.tools ul.tool_list {margin-left:8px; padding-right:16px; font-size:0; overflow:auto; display:flex; flex:1; flex-wrap:nowrap; gap:12px;}
 .sticky_wrap.tools ul.tool_list > li {position:relative;}
 .sticky_wrap.tools ul.tool_list > li > a {width:26px; height:26px; white-space:nowrap; background-image:url('../images/common/icon_m_detail_tool.png'); background-repeat:no-repeat; background-size:300px auto; display:block;}
 
@@ -111,8 +113,8 @@ h2 .sum {color:#616161; font-size:12px; font-weight:500; position:absolute; top:
 
 .fast_list {margin-top:-8px; margin-left:-8px; display:flex; flex-wrap:wrap;}
 .fast_list > li {width:50%; margin-top:8px; padding-left:8px;}
-.fast_list > li div {height:100%; padding:14px 7px; background-color:#fff; border-radius:5px; position:relative;}
-.fast_list > li div a {height:100%; color:#000; position:relative; display:block;}
+.fast_list > li div {padding-top:125%; background-color:#fff; border-radius:5px; position:relative;}
+.fast_list > li div a {color:#000; position:absolute; top:14px; right:7px; bottom:14px; left:7px; overflow:hidden; display:block;}
 .fast_list > li div a:after {background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); border-radius:0 0 5px 5px; content:''; position:absolute; top:50%; right:0; bottom:0; left:0;}
 .fast_list > li div > em {width:12px; height:12px; border-radius:50%; position:absolute; right:14px; bottom:14px; z-index:1; display:block;}
 .fast_list > li div > .type_01 {background-color:#3BCA9F;}

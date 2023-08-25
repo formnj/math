@@ -30,7 +30,18 @@
                 $(this).text('전체선택').attr('class','all_select');
 
                 $('.detail_top .photo').text('삭제').attr('class', 'delete');
+
+                $(this).parent().siblings('.add').attr('class','close').children().text('닫기');
             }
+        });
+
+        /* 선택 비활성화 */
+        $('.detail_top').delegate('.close','click', function(){
+            $('.detail_top  .all_select').text('선택').attr('class', 'select');
+            $('.detail_top .delete').text('사진').attr('class', 'photo');
+            $(this).attr('class','add').children().text('추가');
+
+            $('.fast_list .check').removeClass('active');
         });
 
         /* 전체선택, 해제 */
@@ -57,6 +68,11 @@
             /* 전체 삭제 후 "리스트가 없습니다." 노출 */
             if($('.fast_list > li').length < 1){
                 $('.no_data').addClass('active');
+
+                /* 선택할 요소가 없으므로 선택 비활성화 */
+                $('.detail_top  .all_select').text('선택').attr('class', 'select');
+                $('.detail_top .delete').text('사진').attr('class', 'photo');
+                $('.detail_top .close').attr('class', 'add').children('추가');
             }
         });
     });

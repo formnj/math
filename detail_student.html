@@ -14,6 +14,12 @@
 <script type="text/javascript" src="./js/swiper.js"></script>
 <script type="text/javascript">
     $(function(){
+        $(window).click(function(){
+            /* 오답 타입 선택 레이어 닫음 */
+            $('.option_type').removeClass('active');
+            $('.sticky_wrap [class*="option_"]').remove();
+        });
+
         /* 정답풀이 노출 */
         $('.check_ani em').click(function(){
             if($(this).parent().find('input').is(':checked')){
@@ -42,14 +48,16 @@
         });
         
         /* 툴 활성화 및 레이어 노출 */
-        $('.tool_list a').click(function(){
+        $('.tool_list a').click(function(e){
+            e.stopPropagation();
+
+            $('.option_type').removeClass('active');
+
             $('.tool_list > li').removeClass('active');
             $(this).parent().addClass('active');
-            if($('[class*="option_"]').length > 0){
-                $('[class*="option_"]').remove();
+            if($('.sticky_wrap [class*="option_"]').length > 0){
+                $('.sticky_wrap [class*="option_"]').remove();
             }
-
-            console.log($(this).parent().offset().left);
 
             var _class = $(this).parent().attr('class');
             var _key = _class.replace(' active','');
@@ -82,8 +90,20 @@
             $('[class*="option_"] li').delegate('button', 'click', function(){
                 $('.tool_list .active a').attr('class',$(this).parent().attr('class'));
 
-                $('[class*="option_"]').remove();
+                $('.sticky_wrap [class*="option_"]').remove();
             });
+        });
+
+        /* 오답 타입 선택 */
+        $('.btn_wrong_type').click(function(e){
+            e.stopPropagation();
+            $('.option_type').addClass('active');
+            $('.sticky_wrap [class*="option_"]').remove();
+        });
+
+        $('.option_type button').click(function(){
+            $('.btn_wrong_type').attr('class','btn_wrong_type '+$(this).parent().attr('class'));
+            $('.option_type').removeClass('active');
         });
     });
 </script>
@@ -95,7 +115,7 @@
             <button class="history_back">뒤로</button>
             <strong>
                 <!-- 상세에서만 노출 : 해당 타입 클래스 적용 -->
-                <em class="type_01">틀린</em>
+                <em class="btn_wrong_type type_01">중요한 문제</em>
                 <!-- //상세에서만 노출 : 해당 타입 클래스 적용 -->
             1. 방정식과 부등식</strong>
             <ul class="quick">
@@ -107,6 +127,15 @@
                     </button>
                 </li>
             </ul>
+
+            <!-- 오답 타입 선택 레이어 -->            
+            <ul class="option_type">
+                <li class="type_01"><button>중요한 문제</button></li>
+                <li class="type_02"><button>어려운 문제</button></li>
+                <li class="type_03"><button>실수한 문제</button></li>
+                <li class="type_04"><button>틀린 문제</button></li>
+            </ul>
+            <!-- //오답 타입 선택 레이어 -->
         </header>
         <!-- //header -->
 

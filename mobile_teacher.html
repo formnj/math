@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진단수학</title>
+
+<link rel="stylesheet" href="./css/teacher_main.css">
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+
+<link rel="stylesheet" href="./css/swiper.css">
+<script type="text/javascript" src="./js/swiper.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.progress_wrap').each(function(){
+            progress_bar(this);
+            $(this).find('em').append(' %');
+        });
+    });
+</script>
+</head>
+<body>
+    <div id="wrap" class="teacher">
+        <!-- header -->
+        <header>
+            <h1>진단수학 고교</h1>
+
+            <ul class="quick">
+                <li>
+                    <button class="all_menu">
+                        <em>전체메뉴</em>
+                    </button>
+                </li>
+                <li><a href="#none" class="search">검색</a></li>
+                <li><a href="#none" class="alarm">알림</a></li>
+            </ul>
+        </header>
+        <!-- //header -->
+
+        <div id="container">
+            <div class="content">
+                <!-- user info -->
+                <div class="user_info">
+                    <p>
+                        <strong>진단01 <em>선생님</em></strong>
+                        <span class="thumb"><em><img src="./images/common/img_user_default.png" alt="" /></em></span>
+                    </p>
+                    <ul>
+                        <li class="class">
+                            <a href="#none">
+                                <span>진행 클래스</span>
+                                <strong>2</strong>
+                            </a>
+                        </li>
+                        <li class="student">
+                            <a href="#none">
+                                <span>가입 학생</span>
+                                <strong>12</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //user info -->
+
+                <!-- center -->
+                <div class="module_main">
+                    <section class="schedule">
+                        <h2>이번주 스케줄
+                            <span>7월, 2023</span>
+                        </h2>
+                        <div class="inner">
+                            <ul class="week_wrap">
+                                <li class="current">
+                                    <p>
+                                        <em>+1</em>
+                                        <span>월</span>
+                                        <strong>03</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>화</span>
+                                        <strong>04</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>수</span>
+                                        <strong>05</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>목</span>
+                                        <strong>06</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>금</span>
+                                        <strong>07</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>토</span>
+                                        <strong>08</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <em>+1</em>
+                                        <span>일</span>
+                                        <strong>09</strong>
+                                    </p>
+                                </li>
+                            </ul>
+                            <ul class="legend"><!-- type : 01=과제마감 -->
+                                <li>
+                                    <span class="type_01">과제 마감</span>
+                                </li>
+                            </ul>
+                            <a href="#none" class="more">더보기</a>
+                        </div>
+                    </section>
+
+                    <section class="pronunciation">
+                        <h2>진행 과제
+                            <strong>10</strong>
+                            <a href="#none" class="more">더보기</a>
+                        </h2>
+                        <dl>
+                            <dt>
+                                <p>
+                                    <span>1학년</span>
+                                    <strong>3-4.도형의 이해</strong>
+                                    <span>실력평가</span>
+                                </p>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <!-- loop -->
+                                    <li>
+                                        <div><!-- 상태값 : default = 완료전 / class="complete" = 완료 -->
+                                            <strong>인제고 <em>1반</em></strong>
+                                            <span>D-5</span>
+                                            <p class="progress_wrap">
+                                                <em>0</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <!-- //loop -->
+
+                                    <li>
+                                        <div class="complete">
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>완료</span>
+                                            <p class="progress_wrap">
+                                                <em>100</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </section>
+                </div>
+                <!-- //center -->
+            </div>
+        </div>
+
+        <!-- action bar -->
+        <div class="action_bar teacher">
+            <ul>
+                <li><a href="#none" class="home active">홈</a></li><!-- 활성화 a에 active 클래스 추가 -->
+                <li><a href="#none" class="schedule">과제 일정</a></li>
+                <li><a href="#none" class="class">클래스</a></li>
+                <li><a href="#none" class="message">메세지</a></li>
+                <li><a href="#none" class="management">과제 관리</a></li>
+            </ul>
+        </div>
+        <!-- //action bar -->
+    </div>    
+</body>
+</html>

@@ -55,9 +55,9 @@ html, body, #wrap, #container, .content {height:100%;}
 .module_main .schedule .inner {padding:8px; background-color:#fff; border-radius:12px; text-align:center;}
 
 .alert_ment {margin-bottom:28px;}
-.alert_ment span {margin-left:4px; color:#9C9C9C; font-size:18px;}
+.alert_ment span {margin-left:4px; color:#9C9C9C; font-size:16px;}
 .alert_ment p {margin-top:7px; padding:6px 12px; color:#434343; font-size:14px; font-weight:500; background-color:#fff; border-radius:50px;}
-.alert_ment img {width: 18px;}
+.alert_ment img {width: 16px;}
 
 .schedule h2 {justify-content:space-between;}
 .schedule h2 span {margin-right:4px; color:#858585; font-size:16px; font-weight:500;}

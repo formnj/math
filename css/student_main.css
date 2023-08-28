@@ -39,7 +39,7 @@
 
 .schedule_detail li {height:18px; margin:6px 4px; background-color:#F1F1F1; border-radius:50px; position:relative;}
 .schedule_detail li + li {margin-top:4px;}
-.schedule_detail p {padding:0 8px; color:#fff; font-size:12px; font-weight:500; line-height:16px; white-space:nowrap; border:1px solid transparent; border-radius:50px; overflow:hidden; text-align:left; text-overflow:ellipsis; position:absolute; top:0; bottom:0;}
+.schedule_detail p {padding:0 8px; color:#fff; font-size:12px; font-weight:500; line-height:16px; white-space:nowrap; border:1px solid transparent; border-radius:50px; box-sizing:border-box; overflow:hidden; text-align:left; text-overflow:ellipsis; position:absolute; top:0; bottom:0;}
 .schedule_detail .type_04 {color:#B37BE6;}
 .schedule .more {color:#aeaeae; font-size:11px; text-decoration:underline;}
 

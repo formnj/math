@@ -24,8 +24,7 @@
 .week_wrap li {padding:4px; flex:1;}
 .week_wrap p {padding:4px 5px 5px; border:1px solid #D8D8D8; border-radius:6px; text-align:center; position:relative;}
 .week_wrap .current p {background-color:#A565E2; border-color:#A565E2;}
-.week_wrap p em {color:#fff; font-size:8px; font-style:normal; line-height:14px; text-align:center; position:absolute; top:-5px; right:-5px; z-index:1;}
-.week_wrap p em:after {width:14px; height:14px; background-color:#3BCA9F; border-radius:50%; content:''; position:absolute; top:0; left:-2px; z-index:-1; display:block;}
+.week_wrap p em {width:14px; height:14px; padding:1px 2px; color:#fff; font-size:8px; font-style:normal; line-height:100%; background-color:#3BCA9F; border-radius:50%; text-align:center; position:absolute; top:-5px; right:-5px;}
 .week_wrap p * {display:block;}
 .week_wrap p span {color:#D8D8D8; font-size:13px;}
 .week_wrap p strong {margin-top:-2px; color:#818181; font-size:14px;}

@@ -14,9 +14,130 @@
 <script type="text/javascript" src="./js/swiper.js"></script>
 <script type="text/javascript">
     $(function(){
+        /* load more sample */
+        $('.pronunciation > .more').click(function(){
+            $('.pronunciation dl').append(`<dt>
+                <p>
+                    <span>2학년</span>
+                    <strong>2-2.나머지정리와 인수분해</strong>
+                    <span>실력평가</span>
+                </p>
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        <div>
+                            <strong>인제고 <em>1반</em></strong>
+                            <span>D-5</span>
+                            <p class="progress_wrap">
+                                <em>28%</em>
+                                <span class="progress_bar"></span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <strong>인제고 <em>2반</em></strong>
+                            <span>D-10</span>
+                            <p class="progress_wrap">
+                                <em>92%</em>
+                                <span class="progress_bar"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="complete">
+                            <strong>인제고 <em>2반</em></strong>
+                            <span>완료</span>
+                            <p class="progress_wrap">
+                                <em>100%</em>
+                                <span class="progress_bar"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nothing">
+                            <strong>인제고 <em>2반</em></strong>
+                            <span>D-12</span>
+                            <p class="progress_wrap">
+                                <em>0%</em>
+                                <span class="progress_bar"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="complete">
+                            <strong>인제고 <em>2반</em></strong>
+                            <span>완료</span>
+                            <p class="progress_wrap">
+                                <em>100%</em>
+                                <span class="progress_bar"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>인제고 <em>2반</em></strong>
+                            <span>21시간 전</span>
+                            <p class="progress_wrap">
+                                <em>81%</em>
+                                <span class="progress_bar"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="complete">
+                            <strong>인제고 <em>2반</em></strong>
+                            <span>완료</span>
+                            <p class="progress_wrap">
+                                <em>100%</em>
+                                <span class="progress_bar"></span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </dd>`);
+
+            $('.progress_wrap').each(function(){
+                $(this).find('.progress_bar').width($(this).find('em').text());
+
+                var _left = ($(this).find('.progress_bar').width() - $(this).find('em').width() * 0.5);
+
+                if(_left < 0){
+                    _left = ['0','0'];
+                } else if(_left >= ($(this).find('.progress_bar').width() - ($(this).find('em').width() * 0.5))) {
+                    _left = [-($(this).find('em').width()),$(this).find('em').text()];
+                } else {
+                    _left = [-($(this).find('em').width() * 0.5),$(this).find('em').text()];
+                }
+                
+                $(this).find('em').css({
+                    marginLeft:_left[0],
+                    left:_left[1]
+                });
+            });
+        })
+        /* //load more sample */
+
+
         $('.progress_wrap').each(function(){
-            progress_bar(this);
-            $(this).find('em').append(' %');
+            $(this).find('.progress_bar').width($(this).find('em').text());
+
+            var _left = ($(this).find('.progress_bar').width() - $(this).find('em').width() * 0.5);
+
+            if(_left < 0){
+                _left = ['0','0'];
+            } else if(_left >= ($(this).find('.progress_bar').width() - ($(this).find('em').width() * 0.5))) {
+                _left = [-($(this).find('em').width()),$(this).find('em').text()];
+            } else {
+                _left = [-($(this).find('em').width() * 0.5),$(this).find('em').text()];
+            }
+            
+            $(this).find('em').css({
+                marginLeft:_left[0],
+                left:_left[1]
+            });
         });
     });
 </script>
@@ -137,6 +258,7 @@
                             <a href="#none" class="more">더보기</a>
                         </h2>
                         <dl>
+                            <!-- loop -->
                             <dt>
                                 <p>
                                     <span>1학년</span>
@@ -148,11 +270,11 @@
                                 <ul>
                                     <!-- loop -->
                                     <li>
-                                        <div><!-- 상태값 : default = 완료전 / class="complete" = 완료 -->
+                                        <div><!-- 상태값 : default = 완료전 / class="complete" = 완료 /  nothing = 진행률 0% -->
                                             <strong>인제고 <em>1반</em></strong>
                                             <span>D-5</span>
                                             <p class="progress_wrap">
-                                                <em>0</em>
+                                                <em>30%</em><!-- progress_bar 넓이 값으로 이용됨. -->
                                                 <span class="progress_bar"></span>
                                             </p>
                                         </div>
@@ -160,11 +282,137 @@
                                     <!-- //loop -->
 
                                     <li>
+                                        <div>
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>D-10</span>
+                                            <p class="progress_wrap">
+                                                <em>11.5%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
                                         <div class="complete">
                                             <strong>인제고 <em>2반</em></strong>
                                             <span>완료</span>
                                             <p class="progress_wrap">
-                                                <em>100</em>
+                                                <em>100%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="nothing">
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>D-12</span>
+                                            <p class="progress_wrap">
+                                                <em>0%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="complete">
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>완료</span>
+                                            <p class="progress_wrap">
+                                                <em>100%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>21시간 전</span>
+                                            <p class="progress_wrap">
+                                                <em>81%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="complete">
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>완료</span>
+                                            <p class="progress_wrap">
+                                                <em>100%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </dd>
+                            <!-- //loop -->
+
+                            <dt>
+                                <p>
+                                    <span>2학년</span>
+                                    <strong>2-2.나머지정리와 인수분해</strong>
+                                    <span>실력평가</span>
+                                </p>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <!-- loop -->
+                                    <li>
+                                        <div>
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>21시간 전</span>
+                                            <p class="progress_wrap">
+                                                <em>98%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <!-- //loop -->
+
+                                    <li>
+                                        <div>
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>D-10</span>
+                                            <p class="progress_wrap">
+                                                <em>11.5%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="complete">
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>완료</span>
+                                            <p class="progress_wrap">
+                                                <em>100%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="nothing">
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>D-12</span>
+                                            <p class="progress_wrap">
+                                                <em>0%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="complete">
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>완료</span>
+                                            <p class="progress_wrap">
+                                                <em>100%</em>
+                                                <span class="progress_bar"></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="complete">
+                                            <strong>인제고 <em>2반</em></strong>
+                                            <span>완료</span>
+                                            <p class="progress_wrap">
+                                                <em>100%</em>
                                                 <span class="progress_bar"></span>
                                             </p>
                                         </div>
@@ -172,6 +420,8 @@
                                 </ul>
                             </dd>
                         </dl>
+
+                        <a href="#none" class="more">LOAD MORE</a>
                     </section>
                 </div>
                 <!-- //center -->

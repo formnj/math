@@ -37,7 +37,7 @@
 .week_wrap p strong {margin-top:-2px; color:#818181; font-size:14px;}
 .week_wrap .current p span, .week_wrap .current p strong {color:#FDEFFF;}
 .legend {padding:3px 8px 2px; display:flex; justify-content:end; gap:9px;}
-.legend span {color:#949494; font-size:10px; display:flex; align-items:center;}
+.legend span {color:#949494; font-size:12px; display:flex; align-items:center;}
 .legend span:before {width:8px; height:8px; margin-right:2px; border-radius:50%; box-sizing:border-box; content:''; display:block;}
 .legend span.type_01:before, .schedule_detail .type_01 {background-color:#189475;}
 

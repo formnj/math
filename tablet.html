@@ -21,6 +21,9 @@
                     <strong>2-2. 이차방정식과 이차함수 그리고</strong>
                     <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
                 </p>
+                <!-- toggle button -->
+                <button>열기</button>
+                <!-- //toggle button -->
             </dt>
             <dd>
                 <div>
@@ -37,6 +40,9 @@
                     <strong>2-2. 이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고</strong>
                     <span class="dday_after day">D+10</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
                 </p>
+                <!-- toggle button -->
+                <button>열기</button>
+                <!-- //toggle button -->
             </dt>
             <dd>
                 <div>
@@ -77,8 +83,13 @@
             });
         });
 
-        $('.pronunciation').delegate('dt p', 'click', function(){
+        $('.pronunciation').delegate('dt button', 'click', function(){
             toggle_slide(this);
+            if($(this).parent().hasClass('active')){
+                $(this).text('닫힘');
+            } else {
+                $(this).text('열림');
+            }
         });
     });
 </script>
@@ -238,6 +249,9 @@
                                     <strong>2-2. 이차방정식과 이차함수 그리고</strong>
                                     <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
                                 </p>
+                                <!-- toggle button -->
+                                <button>열기</button>
+                                <!-- //toggle button -->
                             </dt>
                             <dd>
                                 <div>
@@ -254,6 +268,9 @@
                                     <strong>2-2. 이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고이차방정식과 이차함수 그리고</strong>
                                     <span class="dday_after day">D+10</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
                                 </p>
+                                  <!-- toggle button -->
+                                  <button>열기</button>
+                                  <!-- //toggle button -->
                             </dt>
                             <dd>
                                 <div>
@@ -270,6 +287,9 @@
                                     <strong>2-2. 이차방정식과 이차함수 그리고</strong>
                                     <span class="dday_before day">D-3</span><!-- dday_before=d-day이전 / dday_after=d-day이후, day=일단위 / hour=시간단위 -->
                                 </p>
+                                  <!-- toggle button -->
+                                  <button>열기</button>
+                                  <!-- //toggle button -->
                             </dt>
                             <dd>
                                 <div>

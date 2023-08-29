@@ -62,7 +62,7 @@ img {max-width:100%;}
 
 h2 {position:relative;}
 
-.module_left {width:200px; padding:0 24px;}
+.module_left {width:200px; height:100%; padding:0 24px; overflow: auto;}
 .module_left h1 {margin : 16px 0}
 .module_left dt a {padding:6px 0; color:#222; font-size:15px; font-weight:700; position:relative; display:flex; align-items:center;}
 .module_left dt a:before {width:26px; height:26px; margin-right:8px; background-image:url('../images/common/icon_gnb.png'); background-repeat:no-repeat; background-size:60px auto; content:''; display:block;}

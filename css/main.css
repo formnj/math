@@ -66,7 +66,7 @@ html, body, #wrap, #container, .content {height:100%;}
 .week_wrap {display:flex;}
 .week_wrap li {padding:4px; flex:1;}
 .week_wrap p {padding:4px 10px 5px; border:1px solid #D8D8D8; border-radius:6px; text-align:center; position:relative;}
-.week_wrap .current p {background-color:#A565E2; border-color:#A565E2;}
+.week_wrap .current p, .week_wrap p:focus {background-color:#A565E2; border-color:#A565E2;}
 .week_wrap p em {width:18px; height:18px; padding:2px; color:#fff; font-size:12px; font-style:normal; line-height:14px; background-color:#3BCA9F; border-radius:50%; text-align:center; position:absolute; top:-5px; right:-5px;}
 .week_wrap p * {display:block;}
 .week_wrap p span {color:#D8D8D8; font-size:13px;}

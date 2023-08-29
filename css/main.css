@@ -3,7 +3,7 @@ html, body, #wrap, #container, .content {height:100%;}
 
 .content {display:flex; flex-wrap:wrap;}
 
-.module_right {width:309px; height:100%; margin-top:15px; padding:0 20px; overflow: auto;}
+.module_right {width:309px; height:100%; padding:15px 20px; overflow: auto;}
 .module_right .user_info {padding:10px 0; display:flex; align-items:center;}
 .module_right .user_info > * {float:left; display:block;}
 .module_right .user_info .thumb {width:54px; height:54px; margin-right:13px; margin-left:5px; border-radius:50%; position:relative;}

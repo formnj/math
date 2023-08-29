@@ -64,7 +64,7 @@
 .pronunciation dl {padding:0 20px; text-align:left;}
 .pronunciation dt {position:relative; cursor:pointer;}
 .pronunciation dt p {padding:8px 0; display:flex; align-items:center;}
-.pronunciation dt strong {padding:0 8px; font-size:15px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;}
+.pronunciation dt strong {padding:0 12px 0 8px; font-size:15px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;}
 .pronunciation dt span {padding:1px 8px 3px;color:#949494; font-size:12px; border:1px solid #C8C8C8; border-radius:4px; display:block;}
 .pronunciation dd {margin-top:3px;}
 .pronunciation dd + dt:before {margin-top:19px; padding-top:11px; border-top:1px solid #D9D9D9; content:''; display:block;}

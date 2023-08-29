@@ -8,7 +8,7 @@
 .user_info {padding-top:5px; position:relative;}
 .user_info p {padding:0 16px; color:#fff; display:flex; align-items:flex-end; justify-content:space-between;}
 .user_info p .thumb {width:60px; height:60px;}
-.user_info p strong {font-size:18px; display:flex; align-items:center;}
+.user_info p strong {font-size:18px; display:flex; align-items:baseline;}
 .user_info p strong em {margin-left:4px; font-size:14px; font-weight:400;}
 .user_info em {font-style:normal;}
 

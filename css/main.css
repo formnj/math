@@ -108,7 +108,7 @@ html, body, #wrap, #container, .content {height:100%;}
 .pronunciation dt p:before {width:32px; height:32px; margin-right:8px; background:url('../images/main/icon_pronunciation.png') 0 0 no-repeat; background-size:cover; content:''; display:block;}
 .pronunciation dt.study p:after, .pronunciation dt.similar p:after {width:8px; height:8px; background-color:#3BCA9F; border-radius:50%; content:''; position:absolute; top:9px; left:43px; display:block;}
 .pronunciation dt.similar p:after {background-color:#EDAFFF;}
-.pronunciation dt strong {font-size:15px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;}
+.pronunciation dt strong {padding-right:12px; font-size:15px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;}
 .pronunciation dd + dt {margin-top:12px;}
 .pronunciation dd {margin-bottom:-12px; color:#A4A4A4; background-color:#fff; border-radius:0 0 12px 12px; display:none; transform:translateY(-12px);}
 .pronunciation dd div {padding:12px 48px 12px 60px; display:flex; align-items:center; justify-content:space-between;}

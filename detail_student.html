@@ -18,17 +18,26 @@
             /* 오답 타입 선택 레이어 닫음 */
             $('.option_type').removeClass('active');
             $('.sticky_wrap [class*="option_"]').remove();
+
+            /* 신고하기 레이어 닫음 */
+            $('.report_layer').removeClass('active');
         });
 
         /* 정답풀이 노출 */
         $('.check_ani em').click(function(){
             if($(this).parent().find('input').is(':checked')){
                 $(this).text('OFF');
-                $('.answer').stop().slideUp();
+                $('.answer').stop().hide();
             } else {
                 $(this).text('ON');
-                $('.answer').stop().slideDown();
+                $('.answer').stop().show();
             }
+        });
+
+        /* 신고하기 레이어 */
+        $('.detail_bottom .report').click(function(e){
+            e.stopPropagation();
+            $('.report_layer').addClass('active');
         });
 
         /* 편집기능 */
@@ -97,7 +106,11 @@
         /* 오답 타입 선택 */
         $('.btn_wrong_type').click(function(e){
             e.stopPropagation();
-            $('.option_type').addClass('active');
+            if($('.option_type').hasClass('active')){
+                $('.option_type').removeClass('active');
+            } else {
+                $('.option_type').addClass('active');
+            }
             $('.sticky_wrap [class*="option_"]').remove();
         });
 
@@ -190,13 +203,10 @@
                     </p>
                 </div>
                 <div class="answer">
-                    x에 대한 내림차순으로 정리하려면 x의 차수가 높은 항이 앞에 위치하도록 정리해야 한다.
-                    ( i ) x2 이 포함된 항은 2x2 이다.
-                    ( ii ) x가 포함된 항은 5xy = 5yx 이다.
-                    ( iii ) 상수항은 -y2 + 3y + 1 이다.
-                    따라서 주어진 식을 x에 대한 내림차순으로 정리하면
-                    2x2 + 5yx - y2 + 3y + 1 
-                    이다.
+                    <p>x에 대한 내림차순으로 정리하려면 x의 차수가 높은 항이 앞에 위치하도록 정리해야 한다.</p>
+                    <p>( i ) x2 이 포함된 항은 2x2 이다.<br/> ( ii ) x가 포함된 항은 5xy = 5yx 이다.<br/> ( iii ) 상수항은 -y2 + 3y + 1 이다.</p>
+                    <p>따라서 주어진 식을 x에 대한 내림차순으로 정리하면 2x2 + 5yx - y2 + 3y + 1이다.</p>
+                    <p>x에 대한 내림차순으로 정리하려면 x의 차수가 높은 항이 앞에 위치하도록 정리해야 한다.<br/> ( i ) x2 이 포함된 항은 2x2 이다.<br/> ( ii ) x가 포함된 항은 5xy = 5yx 이다.<br/> ( iii ) 상수항은 -y2 + 3y + 1 이다.<br/> 따라서 주어진 식을 x에 대한 내림차순으로 정리하면 2x2 + 5yx - y2 + 3y + 1 이다.</p>
                 </div>
             </div>
         </div>
@@ -215,6 +225,18 @@
             </p>
         </div>
         <!-- //action bar -->
+
+        <!-- 신고 레이어 -->
+        <div class="report_layer">
+            <p>문제 오류와 관련 없는 내용은 처리되지 않습니다.</p>
+            <ul>
+                <li><button>문제에 오류가 있습니다.</button></li>
+                <li><button>정답이 잘못되었습니다.</button></li>
+                <li><button>해설이 이상합니다.</button></li>
+                <li><button>기타</button></li>
+            </ul>
+        </div>
+        <!-- //신고 레이어 -->
     </div>    
 </body>
 </html>

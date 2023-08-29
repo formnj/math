@@ -18,12 +18,29 @@
             toggle_slide(this);
         });
 
-        /* 학년 선택 확인 위한 기능입니다. 개발 시 제거하시면 됩니다. */
-        $('.sticky_wrap li a').click(function(){
-            $(this).parent().siblings().children().removeClass('active');
-            $(this).addClass('active');
-        });
-        /* //학년 선택 확인 위한 기능입니다. 개발 시 제거하시면 됩니다. */
+        if($('.sticky_wrap .tab').length > 0){
+            $('.sticky_wrap').append('<em class="active_bar"></em>');
+
+            console.log($('.sticky_wrap .active_bar').length);
+
+            $('.sticky_wrap .active_bar').css({
+                width: $('.sticky_wrap .tab > li').width(),
+                left: $('.sticky_wrap .tab .active').parent().offset().left
+            });
+
+            $('.sticky_wrap li a').click(function(){
+                $(this).parent().siblings().children().removeClass('active');
+                $(this).addClass('active');
+
+                $(this).closest('ul').siblings('.active_bar').css({
+                    left: $(this).parent().offset().left
+                });
+
+                /* tab 콘텐츠 활성화 */
+                $('.tab_content > ul').removeClass('active');
+                $('.tab_content > ul').eq($(this).parent().index()).addClass('active');
+            });
+        }
     });
 </script>
 </head>
@@ -56,164 +73,84 @@
                 <h2>목차
                     <span class="sum">총 문제수 : 16</span>
                 </h2>
-                <ul class="wrong_list">
-                    <!-- loop -->
-                    <li>
-                        <a href="./detail_student.html">
-                            <em>1</em>
-                            <strong>다항식</strong>
-                            <span>1 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <!-- //loop -->
-                    <li>
-                        <a href="#none">
-                            <em>2</em>
-                            <strong>방정식과 부등식</strong>
-                            <span>5 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>3</em>
-                            <strong>도형의 방정식</strong>
-                            <span>10 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>4</em>
-                            <strong>집합과 명제</strong>
-                            <span>- <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>2</em>
-                            <strong>방정식과 부등식</strong>
-                            <span>5 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>3</em>
-                            <strong>도형의 방정식</strong>
-                            <span>10 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>4</em>
-                            <strong>집합과 명제</strong>
-                            <span>- <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>2</em>
-                            <strong>방정식과 부등식</strong>
-                            <span>5 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>3</em>
-                            <strong>도형의 방정식</strong>
-                            <span>10 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>4</em>
-                            <strong>집합과 명제</strong>
-                            <span>- <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>2</em>
-                            <strong>방정식과 부등식</strong>
-                            <span>5 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>3</em>
-                            <strong>도형의 방정식</strong>
-                            <span>10 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>4</em>
-                            <strong>집합과 명제</strong>
-                            <span>- <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>2</em>
-                            <strong>방정식과 부등식</strong>
-                            <span>5 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>3</em>
-                            <strong>도형의 방정식</strong>
-                            <span>10 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>4</em>
-                            <strong>집합과 명제</strong>
-                            <span>- <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>2</em>
-                            <strong>방정식과 부등식</strong>
-                            <span>5 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>3</em>
-                            <strong>도형의 방정식</strong>
-                            <span>10 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>4</em>
-                            <strong>집합과 명제</strong>
-                            <span>- <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>2</em>
-                            <strong>방정식과 부등식</strong>
-                            <span>5 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>3</em>
-                            <strong>도형의 방정식</strong>
-                            <span>10 <em>문제</em></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <em>4</em>
-                            <strong>집합과 명제</strong>
-                            <span>- <em>문제</em></span>
-                        </a>
-                    </li>
-                </ul>
+                <!-- 탭 콘텐츠 -->
+                <div class="tab_content">
+                    <!-- tab_01 cont -->
+                    <ul class="wrong_list active">
+                        <!-- loop -->
+                        <li>
+                            <a href="./detail_student.html">
+                                <em>1</em>
+                                <strong>다항식</strong>
+                                <span>1 <em>문제</em></span>
+                            </a>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <a href="#none">
+                                <em>2</em>
+                                <strong>방정식과 부등식</strong>
+                                <span>5 <em>문제</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <em>3</em>
+                                <strong>도형의 방정식</strong>
+                                <span>10 <em>문제</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <em>4</em>
+                                <strong>집합과 명제</strong>
+                                <span>- <em>문제</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <em>5</em>
+                                <strong>함수</strong>
+                                <span>- <em>문제</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <em>6</em>
+                                <strong>경우의 수</strong>
+                                <span>- <em>문제</em></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- //tab_01 cont -->
+                    <!-- tab_02 cont -->
+                    <ul class="wrong_list">
+                        <!-- loop -->
+                        <li>
+                            <a href="./detail_student.html">
+                                <em>1</em>
+                                <strong>지수와 로그</strong>
+                                <span>1 <em>문제</em></span>
+                            </a>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <a href="#none">
+                                <em>2</em>
+                                <strong>삼각함수</strong>
+                                <span>2 <em>문제</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <em>3</em>
+                                <strong>수열</strong>
+                                <span>3 <em>문제</em></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- //tab_02 cont -->
+                <!-- //탭 콘텐츠 -->
             </div>
         </div>
 

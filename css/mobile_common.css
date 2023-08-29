@@ -109,7 +109,7 @@ header.sub .history_back {width:32px; height:32px; font-size:0; background:url('
 .action_bar {position:fixed; right:0; bottom:0; left:0; z-index:1; transition:bottom 0.25s;}
 .action_bar ul {padding:10px 24px; background-color:#fff; border-radius:24px 24px 0 0; box-shadow:0 -4px 8px rgba(201, 201, 201, 0.25); display:flex;}
 .action_bar li {text-align:center; flex:1;}
-.action_bar a {padding-top:30px; padding-bottom:3px; color:#999; font-size:11px; font-weight:500; line-height:11px; position:relative; display:block;}
+.action_bar a {margin-top:0; padding-top:30px; padding-bottom:3px; color:#999; font-size:11px; font-weight:500; line-height:11px; position:relative; display:block;}
 .action_bar a.active {color:#B14EE6;}
 .action_bar a:before {width:26px; height:26px; margin:0 auto; background-image:url('../images/common/action_bar_split.png'); background-repeat:no-repeat; background-size:120px auto; content:''; position:absolute; top:0; left:50%; display:block; transform:translateX(-50%);}
 

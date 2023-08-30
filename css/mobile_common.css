@@ -95,7 +95,7 @@ header.sub strong em.type_04 {background-color:#E13B56;}
 /* 오답노트 타입 선택 레이어 */
 header.sub .option_type {background-color:rgba(255,255,255,1); border-radius:8px; box-shadow:2px 4px 4px rgba(141, 141, 141, 0.25); position:absolute; top:38px; left:45px; display:none;}
 header.sub .option_type.active {display:block;}
-header.sub .option_type li button {padding:6px 12px; display:flex; align-items:center;}
+header.sub .option_type li button {padding:6px 12px; font-size:14px; display:flex; align-items:center;}
 header.sub .option_type li button:before {width:16px; height:16px; margin-right:10px; border-radius:50%; content:''; display:block;}
 header.sub .option_type li.type_01 button:before {background-color:#3BCA9F;}
 header.sub .option_type li.type_02 button:before {background-color:#A565E2;}

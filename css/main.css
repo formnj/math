@@ -20,7 +20,7 @@ html, body, #wrap, #container, .content {height:100%;}
 .module_right h2 {padding-top:9px; padding-bottom:7px; padding-left:4px; color:#363636; font-size:15px; border-bottom:1px solid #d9d9d9; display:flex; justify-content:space-between;}
 .module_right h2 a {margin-top:1px; margin-right:-3px; color:#363636; font-size:12px; font-weight:500; display:flex; align-items:center;}
 .module_right h2 a:after {width:16px; height:16px; background-image:url('../images/common/icon_split.png'); background-position:0 0; background-repeat:no-repeat; background-size:300px auto; vertical-align:middle; content:''; display:inline-block;}
-.module_right .noti ul {height:147px; margin-top:5px; margin-right:-10px; padding-right:10px; overflow:auto;}
+.module_right .noti ul {height:85px; margin-top:5px; margin-right:-10px; padding-right:10px; overflow:auto;}
 .module_right .noti li + li {margin-top:2px;}
 .module_right .noti li a {padding:8px 0; display:flex; flex-wrap:wrap;}
 .module_right .noti .thumb {width:38px; height:38px; position:relative; display:block;}
@@ -32,6 +32,7 @@ html, body, #wrap, #container, .content {height:100%;}
 .module_right .noti p span {margin-top:2px; color:#a6a6a6; font-size:11px;}
 .module_right .noti em {color:#c8c8c8; font-size:10px; font-style:normal;}
 
+.module_right .diagnosis {overflow:hidden;}
 .module_right .diagnosis li {padding:10px 0 9px; color:#c8c8c8; font-size:12px; font-weight:500;}
 .module_right .diagnosis li:not(:first-child) {width:58px; text-align:right;}
 .module_right .diagnosis li:nth-child(1) {flex:1;}

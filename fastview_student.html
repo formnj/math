@@ -32,7 +32,24 @@
                 $('.detail_top .photo').text('삭제').attr('class', 'delete');
 
                 $(this).parent().siblings('.add').attr('class','close').children().text('닫기');
+
+                /* 리스트 링크 제거 */
+                $('.fast_list div').addClass('trigger');
+                $('.fast_list a').attr('data-href', $('.fast_list a').attr('href')).removeAttr('href');
             }
+        });
+
+        /* 리스트 링크 제거 및 check 기능 */
+        $('.fast_list div').each(function(){
+            $(this).click(function(){
+                if($(this).hasClass('trigger')){
+                    if($(this).parent().find('.check input').is(':checked')){
+                        $(this).parent().find('.check input').prop('checked', false);
+                    } else {
+                        $(this).parent().find('.check input').prop('checked', true);
+                    }
+                }
+            });
         });
 
         /* 선택 비활성화 */
@@ -42,6 +59,15 @@
             $(this).attr('class','add').children().text('추가');
 
             $('.fast_list .check').removeClass('active');
+
+            /* 리스트 링크 제거 및 check 기능 */
+            $('.fast_list .check input').prop('checked', false);
+
+            $('.fast_list div').removeClass('trigger');
+            $('.fast_list a').each(function(){
+                $(this).attr('href', $(this).attr('data-href')).removeAttr('data-href');
+            });
+            /* //리스트 링크 제거 및 check 기능 */
         });
 
         /* 전체선택, 해제 */

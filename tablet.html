@@ -9,11 +9,12 @@
 
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
+<script defer type="text/javascript" src="./js/window.js"></script>
 
 <link rel="stylesheet" href="./css/swiper.css">
 <script type="text/javascript" src="./js/swiper.js"></script>
 <script type="text/javascript">
-    $(function(){
+    $(function(){        
         /* load more sample */
         $('.pronunciation > .more').click(function(){
             $('.pronunciation dl').append(`<dt class="study">
@@ -96,6 +97,16 @@
         });
 
         /* 진단하기 리스트 스크롤 관련 */
+        // var module_right = $('.module_right').outerHeight() - 30;
+        // var user_info = $('.user_info').outerHeight();
+        // var noti = $('section.noti').outerHeight() + 16;
+        // $('section.diagnosis').css('height', module_right - user_info - noti - 12);
+            
+        // // var offsetTop = $('section.diagnosis').offset().top;
+        // var diagnosisOuterHeight = $('section.diagnosis').outerHeight()
+        // var diagnosis_Header = $('.diagnosis h2').outerHeight();
+        // var diagnosis_Title = $('.diagnosis ul').outerHeight();
+        // $('.diagnosis dl').css('maxHeight', diagnosisOuterHeight - diagnosis_Header - diagnosis_Title + 32)
     });
 </script>
 </head>
@@ -436,6 +447,42 @@
                                 <span>60</span>
                                 <span>93.3%</span>
                             </dd>
+
+                             <!-- //loop -->
+
+                             <dt>
+                                <strong>2. 방정식과 부등식</strong>
+                                <span>-</span>
+                                <span>-%</span>
+                            </dt>
+                            <dd>
+                                <strong>2-1. 복소수와 이차방정식</strong>
+                                <span>196</span>
+                                <span>90.3%</span>
+                            </dd>
+                            <dd>
+                                <strong>2-2. 이차방정식과 이차함수</strong>
+                                <span>60</span>
+                                <span>93.3%</span>
+                            </dd> <!-- //loop -->
+
+                            <dt>
+                                <strong>2. 방정식과 부등식</strong>
+                                <span>-</span>
+                                <span>-%</span>
+                            </dt>
+                            <dd>
+                                <strong>2-1. 복소수와 이차방정식</strong>
+                                <span>196</span>
+                                <span>90.3%</span>
+                            </dd>
+                            <dd>
+                                <strong>2-2. 이차방정식과 이차함수</strong>
+                                <span>60</span>
+                                <span>93.3%</span>
+                            </dd>
+
+                            
 
 
 

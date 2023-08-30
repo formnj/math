@@ -58,16 +58,17 @@
 
 .pronunciation > .more {width:110px; height:33px; margin-top:12px; color:#fff; font-size:14px; font-weight:500; line-height:33px; background-color:#CBCBCB; border-radius:4px; display:inline-block;}
 
-.pronunciation dl {text-align:left;}
+.pronunciation dl {padding:0 20px; text-align:left;}
 .pronunciation dt {position:relative; cursor:pointer;}
-.pronunciation dt button {width:24px; height:24px; font-size:0; background:url('../images/common/icon_split.png') 0 -60px no-repeat; background-size:300px; content:''; position:absolute; top:12px; right:20px; z-index:1; display:block;}
+.pronunciation dt button {width:24px; height:24px; font-size:0; background:url('../images/common/icon_split.png') 0 -60px no-repeat; background-size:300px; content:''; position:absolute; top:18px; right:0; z-index:1; display:block;}
 .pronunciation dt.active button {transform:rotate(180deg);}
-.pronunciation dt p {padding:8px 48px 8px 20px; border-radius:12px; position:relative; z-index:1; display:flex; align-items:center;}
+.pronunciation dt p {padding:8px 28px 8px 0; border-radius:12px; position:relative; z-index:1; display:flex; align-items:center;}
 .pronunciation dt p:before {width:44px; height:44px; margin-right:8px; background:url('../images/main/icon_pronunciation.png') 0 0 no-repeat; background-size:cover; content:''; display:block;}
-.pronunciation dt.study p:after, .pronunciation dt.similar p:after {width:11px; height:11px; background-color:#3BCA9F; border-radius:50%; content:''; position:absolute; top:8px; left:52px; display:block;}
+.pronunciation dt.study p:after, .pronunciation dt.similar p:after {width:11px; height:11px; background-color:#3BCA9F; border-radius:50%; content:''; position:absolute; top:8px; left:32px; display:block;}
 .pronunciation dt.similar p:after {background-color:#EDAFFF;}
 .pronunciation dt strong {padding-right:12px; font-size:15px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;}
-.pronunciation dd + dt {margin-top:12px;}
+.pronunciation dd + dt {margin-top:8px; padding-top:8px; border-top:1px solid #D9D9D9;}
+.pronunciation dd + dt button {top:26px;}
 .pronunciation dd {margin-bottom:-12px; color:#A4A4A4; background-color:#fff; border-radius:0 0 12px 12px; display:none; transform:translateY(-12px);}
 .pronunciation dd div {padding:12px 48px 12px 60px; display:flex; align-items:center; justify-content:space-between;}
 .pronunciation dd strong {margin-bottom:8px; font-size:13px; font-weight:500; line-height:13px; display:block;}

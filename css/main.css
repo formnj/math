@@ -32,7 +32,6 @@ html, body, #wrap, #container, .content {height:100%;}
 .module_right .noti p span {margin-top:2px; color:#a6a6a6; font-size:11px;}
 .module_right .noti em {color:#c8c8c8; font-size:10px; font-style:normal;}
 
-.module_right .diagnosis {max-height:460px;}
 .module_right .diagnosis li {padding:10px 0 9px; color:#c8c8c8; font-size:12px; font-weight:500;}
 .module_right .diagnosis li:not(:first-child) {width:58px; text-align:right;}
 .module_right .diagnosis li:nth-child(1) {flex:1;}
@@ -40,7 +39,7 @@ html, body, #wrap, #container, .content {height:100%;}
 .module_right .diagnosis ul, .module_right .diagnosis dl > * {width:100%; display:flex;}
 /* .module_right .diagnosis li, .module_right .diagnosis dl > * > * {display:table-cell;} */
 
-.module_right .diagnosis dl {max-height: 360px; margin-right:-10px; padding-right:10px; overflow: auto;}
+.module_right .diagnosis dl {margin-right:-10px; padding-right:10px; overflow: auto;}
 .module_right .diagnosis dl span {text-align:right;}
 .module_right .diagnosis dt, .module_right .diagnosis dd {font-size:12px;}
 .module_right .diagnosis dt {padding-bottom:3px;}

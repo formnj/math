@@ -70,8 +70,8 @@
 .pronunciation dd + dt {margin-top:12px;}
 .pronunciation dd {margin-bottom:-12px; color:#A4A4A4; background-color:#fff; border-radius:0 0 12px 12px; display:none; transform:translateY(-12px);}
 .pronunciation dd div {padding:12px 48px 12px 60px; display:flex; align-items:center; justify-content:space-between;}
-.pronunciation dd strong {margin-bottom:-2px; font-size:13px; font-weight:500; display:block;}
-.pronunciation dd em {font-size:12px; font-style:normal; position:relative; display:inline-block;}
+.pronunciation dd strong {margin-bottom:8px; font-size:13px; font-weight:500; line-height:13px; display:block;}
+.pronunciation dd em {font-size:12px; font-style:normal; line-height:12px; position:relative; display:inline-block;}
 .pronunciation dd em + em { margin-left:6px; padding-left:6px;}
 .pronunciation dd em + em:before {height:10px; border-left:1px solid #b9b9b9; content:''; position:absolute; top:50%; left:0; display:block; transform:translateY(-50%);}
 

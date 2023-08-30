@@ -62,7 +62,7 @@ img {max-width:100%;}
 
 h2 {position:relative;}
 
-header {padding:12px 16px 12px 50px; color:#fff; background-color:#B37BE6; position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between;}
+header {padding:12px 16px 12px 50px; color:#fff; background-color:#B37BE6; position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between;}
 header h1 {font-size:18px; font-weight:500;}
 .all_menu {width:26px; height:26px; margin-top:1px; font-size:0; position:absolute; top:50%; left:16px; display:block; transform:translateY(-50%);}
 .all_menu:before, .all_menu em:before, .all_menu em:after {width:18px; height:2px; background-color:#fff; border-radius:2px; content:''; position:absolute; right:4px; left:4px; display:block;}
@@ -106,7 +106,7 @@ header.sub .all_menu {position:static; transform:translateY(0);}
 header.sub .all_menu:before, header.sub .all_menu em:before, header.sub .all_menu em:after {background-color:#aeaeae;}
 header.sub .history_back {width:32px; height:32px; font-size:0; background:url('../images/common/icon_m_split.png') 0 -40px no-repeat; background-size:100px auto; position:absolute; top:50%; left:12px; transform:translateY(-50%); display:block;}
 
-.action_bar {position:fixed; right:0; bottom:0; left:0; z-index:1; transition:bottom 0.25s;}
+.action_bar {position:fixed; right:0; bottom:0; left:0; z-index:2; transition:bottom 0.25s;}
 .action_bar ul {padding:10px 24px; background-color:#fff; border-radius:24px 24px 0 0; box-shadow:0 -4px 8px rgba(201, 201, 201, 0.25); display:flex;}
 .action_bar li {text-align:center; flex:1;}
 .action_bar a {margin-top:0; padding-top:30px; padding-bottom:3px; color:#999; font-size:11px; font-weight:500; line-height:11px; position:relative; display:block;}

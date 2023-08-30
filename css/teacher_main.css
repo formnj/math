@@ -60,7 +60,7 @@
 .pronunciation h2 .more {margin-top:1px; padding:1px 3px 1px 8px; color:#B3B3B3; font-size:11px; font-weight:500; background-color:#fff; border:1px solid #B3B3B3; border-radius:50px; position:absolute; top:50%; right:20px; display:flex; align-items:center; transform:translateY(-50%);}
 .pronunciation h2 .more:after {width:12px; height:12px; background:url('../images/common/icon_split.png') 0 -40px; background-size:300px auto; content:''; display:block;}
 
-.pronunciation > .more {width:110px; height:33px; margin-top:21px; color:#fff; font-size:12px; font-weight:700; line-height:33px; background-color:#CBCBCB; border-radius:4px; display:inline-block;}
+.pronunciation > .more {width:110px; height:33px; margin-top:21px; color:#fff; font-size:14px; font-weight:500; line-height:33px; background-color:#CBCBCB; border-radius:4px; display:inline-block;}
 
 .pronunciation dl {padding:0 20px; text-align:left;}
 .pronunciation dt {position:relative; cursor:pointer;}
@@ -72,13 +72,14 @@
 .pronunciation ul {margin-right:-20px; margin-left:-20px; padding:0 20px; overflow-x:auto; display:flex;}
 .pronunciation li + li {margin-left:8px;}
 .pronunciation li div {width:110px; padding:12px; white-space:nowrap; border:1px solid #C8C8C8; border-radius:12px; text-align:right;}
-.pronunciation li div strong {display:flex; align-items:center; justify-content:space-between;}
-.pronunciation li div span {color:#E13B56; font-size:13px; font-weight:500;}
+.pronunciation li div strong {font-weight:500; display:flex; align-items:center; justify-content:space-between;}
+.pronunciation li div strong em:first-child {width:61px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.pronunciation li div span {color:#E13B56; font-size:14px; font-weight:500;}
 .pronunciation li div em {font-style:normal;}
 
 .pronunciation li .progress_wrap {margin-top:15px; position:relative;}
 .pronunciation li .progress_wrap:after {height:13px; background-color:#EAEAEA; border-radius:2px; content:''; position:absolute; right:0; bottom:0; left:0; display:block;}
-.pronunciation li .progress_wrap em {color:#E13B56; font-size:10px; font-weight:500; position:absolute; bottom:15px; left:0;}
+.pronunciation li .progress_wrap em {color:#E13B56; font-size:12px; font-weight:500; position:absolute; bottom:15px; left:0;}
 .pronunciation li .progress_wrap span {width:0; height:13px; background-color:#E13B56; border-radius:2px; position:relative; z-index:1; display:block;}
 
 .pronunciation li .complete span {color:#949494;}

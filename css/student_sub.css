@@ -8,7 +8,7 @@ body {background-color:#f5f5f5;}
 h2 {margin-bottom:8px; padding:12px 4px 4px; color:#222; font-size:16px; font-weight:700;}
 h2 .sum {color:#616161; font-size:12px; font-weight:500; position:absolute; top:50%; right:0; transform:translateY(-50%);}
 
-.sticky_wrap {background-color:#fff; border-radius:0 0 16px 16px; box-shadow:0 2px 6px rgba(155, 155, 155, 0.25); position:sticky; top:40px; z-index:1;}
+.sticky_wrap {background-color:#fff; border-radius:0 0 16px 16px; box-shadow:0 2px 6px rgba(155, 155, 155, 0.25); position:sticky; top:40px; z-index:3;}
 .sticky_wrap .tab {padding:0 41px; display:flex; gap:25px;}
 .sticky_wrap .tab li {flex:1;}
 .sticky_wrap .tab li a {padding-top:7px; padding-bottom:8px; color:#999; font-size:14px; font-weight:400; text-align:center; position:relative; display:block;}
@@ -142,9 +142,9 @@ h2 .sum {color:#616161; font-size:12px; font-weight:500; position:absolute; top:
 
 .detail .question .explain_check {padding:12px 0; display:flex; align-items:center; justify-content:space-between;}
 .detail .question .explain_check strong {font-size:14px; font-weight:400; display:flex; align-items:center;}
-.detail .question .explain_check span {padding:2px 9px; color:#A565E2; font-size:11px; font-weight:400; border:1px solid #A565E2; border-radius:4px;}
-.detail .question .explain_check .check_ani {margin-left:9px;}
-.detail .question .explain_check .check_ani em {height:20px; padding-right:4px; padding-left:20px; color:#fff; font-size:11px; font-weight:400; font-style:normal; line-height:19px; background-color:#C2C2C2; border:0; border-radius:60px; display:inline-block;}
+.detail .question .explain_check span {padding:4px 9px; color:#A565E2; font-size:12px; font-weight:400; border:1px solid #A565E2; border-radius:4px;}
+.detail .question .explain_check .check_ani {margin-left:9px; display:flex;}
+.detail .question .explain_check .check_ani em {padding-right:4px; padding-left:20px; color:#fff; font-size:11px; font-weight:400; font-style:normal; line-height:19px; background-color:#C2C2C2; border:0; border-radius:60px; display:inline-block;}
 .detail .question .explain_check .check_ani em:before {display:none;}
 .detail .question .explain_check .check_ani input[type='checkbox']:checked + em {padding-right:20px; padding-left:4px; background-color:#5C5C5C;}
 .detail .question .explain_check .check_ani input[type='checkbox']:checked + em:after {left:22px;}

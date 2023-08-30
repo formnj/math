@@ -23,13 +23,13 @@
 .week_wrap {display:flex;}
 .week_wrap li {padding:4px; flex:1;}
 .week_wrap p {padding:4px 5px 5px; border:1px solid #D8D8D8; border-radius:6px; text-align:center; position:relative;}
-.week_wrap .current p {background-color:#A565E2; border-color:#A565E2;}
+.week_wrap .current p, .week_wrap p:hover {background-color:#A565E2; border-color:#A565E2;}
 .week_wrap p em {width:14px; height:14px; color:#fff; font-style:normal; background-color:#3BCA9F; border-radius:50%; text-align:center; position:absolute; top:-5px; right:-5px;}
 .week_wrap p em sup {font-size:8px; line-height:14px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
 .week_wrap p * {display:block;}
 .week_wrap p span {color:#D8D8D8; font-size:13px;}
 .week_wrap p strong {margin-top:-2px; color:#818181; font-size:14px;}
-.week_wrap .current p span, .week_wrap .current p strong {color:#FDEFFF;}
+.week_wrap .current p span, .week_wrap .current p strong, .week_wrap p:hover span, .week_wrap p:hover strong {color:#FDEFFF;}
 .legend {padding:3px 8px 2px; display:flex; justify-content:end; gap:9px;}
 .legend span {color:#949494; font-size:12px; display:flex; align-items:center;}
 .legend span:before {width:8px; height:8px; margin-right:2px; border-radius:50%; box-sizing:border-box; content:''; display:block;}
